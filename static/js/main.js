@@ -54,9 +54,18 @@
       $$('.filtr-btn').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filtr === kat)));
       if (prazdno) prazdno.hidden = n > 0;
     };
-    $$('[data-filtr]').forEach((b) => b.addEventListener('click', () => filtruj(b.dataset.filtr)));
+    /* na úvodu jen nejbližších 6 výprav, zbytek za tlačítkem (při filtru vše) */
+    const LIMIT = 6, vic = $('[data-vic]');
+    const omez = () => {
+      const k = $$('[data-karta]', karty);
+      k.forEach((x, i) => { x.hidden = i >= LIMIT; });
+      if (vic) { vic.hidden = k.length <= LIMIT; $('[data-vic-pocet]', vic).textContent = `(${k.length})`; }
+    };
+    $('[data-vic-btn]')?.addEventListener('click', () => { $$('[data-karta]', karty).forEach((x) => { x.hidden = false; }); vic.hidden = true; });
+    $$('[data-filtr]').forEach((b) => b.addEventListener('click', () => { if (vic) vic.hidden = true; if (b.dataset.filtr) filtruj(b.dataset.filtr); else { filtruj(''); omez(); } }));
+    omez();
     const q = new URLSearchParams(location.search).get('kategorie');
-    if (q) filtruj(q);
+    if (q) { if (vic) vic.hidden = true; filtruj(q); }
   }
 
   /* data expedic pro kompas a pás nejbližšího odjezdu */
@@ -80,6 +89,7 @@
     if (!panel || !e || e.slug === aktivniSlug) return;
     aktivniSlug = e.slug;
     $$('.kr-oblouk').forEach((o) => o.classList.toggle('aktivni', o.dataset.slug === e.slug));
+    $$('.kr-seznam button').forEach((o) => o.setAttribute('aria-pressed', String(o.dataset.slug === e.slug)));
     const v = (k) => panel.querySelector(`[data-v="${k}"]`);
     panel.classList.add('meni');
     setTimeout(() => {
@@ -148,6 +158,15 @@
     t1.textContent = `${zobrazene.length} ${zobrazene.length >= 5 ? 'expedic' : zobrazene.length >= 2 ? 'expedice' : 'expedice'}`;
     const t2 = el('text', { x: 0, y: 92, class: 'kr-stred-mala' });
     t2.textContent = 'příštích 12 měsíců';
+    const sez = document.createElement('ol'); sez.className = 'kr-seznam'; sez.setAttribute('role', 'list');
+    zobrazene.forEach((e) => {
+      const li = document.createElement('li'), b = document.createElement('button');
+      b.type = 'button'; b.dataset.slug = e.slug;
+      b.innerHTML = '<span></span><b></b>'; b.firstChild.textContent = e.termin; b.lastChild.textContent = e.nazev.split(':')[0];
+      b.addEventListener('click', () => { ukaz(e); panel?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); });
+      li.appendChild(b); sez.appendChild(li);
+    });
+    svg.parentNode.after(sez);
     if (nejblizsi) { ukaz(nejblizsi); }
   }
 

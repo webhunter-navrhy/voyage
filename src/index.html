@@ -89,6 +89,7 @@
     <div class="karty" data-karty>
       {% for e in budouci %}{{ karta(e) }}{% endfor %}
     </div>
+    <div class="karty-vic" data-vic hidden><button type="button" class="btn btn-obrys" data-vic-btn>Všechny expedice <span data-vic-pocet></span></button></div>
     <p class="karty-prazdno" data-prazdno hidden>V této kategorii teď žádný termín není. <button type="button" class="odkaz" data-filtr="">Zobrazit všechny cesty</button></p>
     {% if probehle %}
     <details class="archiv" data-archiv>
