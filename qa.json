@@ -3,7 +3,7 @@
   "ok": true,
   "chyby": [],
   "varovani": [
-    "Dotykové cíle <40 px na mobilu: 13× (např. input \"\" 1×1; input \"\" 24×24; a \"Lifestyle & jachting\" 128×38; a \"Dobrodružství & divo\" 167×38)"
+    "Dotykové cíle <40 px na mobilu: 4× (např. input \"\" 1×1; input \"\" 28×28; a \"O nás\" 39×44; a \"Administrace\" 76×38)"
   ],
   "metriky": {
     "sirky": {
@@ -37,13 +37,13 @@
       "kB": 262,
       "url": "https://webhunter-navrhy.github.io/voyage/img/uvod/prales.webp"
     },
-    "snimku_PC": 13,
-    "preneseno_mobil_MB": 1.63,
+    "snimku_PC": 11,
+    "preneseno_mobil_MB": 1.8,
     "nejvetsi_obrazek_mobil": {
       "kB": 262,
       "url": "https://webhunter-navrhy.github.io/voyage/img/uvod/prales.webp"
     },
-    "snimku_mobil": 13,
+    "snimku_mobil": 14,
     "seo": {
       "title": "VOYAGE – expedice v malých skupinách",
       "description": "Expediční výpravy v malých skupinách s propracovaným programem. Termíny, itineráře den po dni, ceny ",
@@ -60,7 +60,7 @@
       "canonical": true,
       "viewport": true
     },
-    "maly_dotykovy_cil": 13,
+    "maly_dotykovy_cil": 4,
     "font_nadpis": "Gilda Display",
     "font_text": "Red Hat Text"
   }

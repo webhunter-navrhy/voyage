@@ -445,8 +445,8 @@ button { font: inherit; color: inherit; }
 }
 @media (max-width: 1060px) {
   .burger { display: block; }
-  .menu { position: fixed; inset: var(--hlavicka) 0 0; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0; padding: 1.5rem var(--gutter) 3rem; background: var(--pisek); color: var(--inkoust); overflow-y: auto; transform: translateX(100%); visibility: hidden; transition: transform .4s var(--ease), visibility 0s linear .4s; }
-  .menu.otevrene { transform: none; visibility: visible; transition: transform .4s var(--ease); }
+  .menu { position: fixed; inset: var(--hlavicka) 0 0; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0; padding: 1.5rem var(--gutter) 3rem; background: var(--pisek); color: var(--inkoust); overflow-y: auto; transform: translateY(-.75rem); opacity: 0; visibility: hidden; transition: transform .35s var(--ease), opacity .35s var(--ease), visibility 0s linear .35s; }
+  .menu.otevrene { transform: none; opacity: 1; visibility: visible; transition: transform .35s var(--ease), opacity .35s var(--ease); }
   .menu a:not(.btn) { font: 400 1.6rem/1.2 var(--display); letter-spacing: 0; text-transform: none; padding: .7rem 0; width: 100%; border-bottom: 1px solid var(--linka); }
   .menu a:not(.btn)::after { display: none; }
   .menu-cta { margin-top: 1.6rem; }
@@ -538,4 +538,4 @@ button { font: inherit; color: inherit; }
   .den::before { left: -2.1rem; }
 }
 
-.paticka li a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+.paticka li a, .paticka-spodek a { display: inline-flex; align-items: center; min-height: 2.75rem; }
