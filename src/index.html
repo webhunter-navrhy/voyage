@@ -137,19 +137,17 @@
       </div>
       <div class="pruvodci-ovladani">
         <p class="sekce-text">{{ T.pruvodci.text|nb }}</p>
-        <div class="sipky"><button type="button" aria-label="Předchozí průvodci" data-posun="-1">←</button><button type="button" aria-label="Další průvodci" data-posun="1">→</button></div>
       </div>
     </header>
   </div>
-  <ul class="pruvodci-pas" role="list" data-pas tabindex="0" aria-label="Průvodci VOYAGE">
+  <ul class="pruvodci-pas" role="list" data-pas aria-label="Průvodci VOYAGE">
     {% for p in pruvodci %}
     <li class="pruvodce{% if loop.first %} pruvodce-hlavni{% endif %}">
       <button type="button" class="pruvodce-btn" data-dialog="p-{{ p.id }}">
-        <span class="pruvodce-foto">{{ img(p.foto, p.jmeno, sizes='(min-width: 900px) 22vw, 70vw') }}</span>
+        <span class="pruvodce-foto">{{ img(p.foto, p.jmeno, sizes='(min-width: 1061px) 18vw, (min-width: 701px) 30vw, 46vw') }}</span>
         <span class="pruvodce-role">{{ p.role }}</span>
         <span class="pruvodce-jmeno">{{ p.jmeno }}</span>
-        <span class="pruvodce-kratce">{{ p.kratce|nb }}</span>
-        {% if loop.first %}<span class="pruvodce-kratce pruvodce-bio">{{ p.bio|nb }}</span>{% endif %}
+        <span class="pruvodce-kratce">{{ (p.bio if loop.first else p.kratce)|nb }}</span>
         <span class="pruvodce-vic">Celý profil</span>
       </button>
       <dialog class="dialog" id="p-{{ p.id }}" aria-labelledby="p-{{ p.id }}-h">

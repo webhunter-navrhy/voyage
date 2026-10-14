@@ -3,7 +3,7 @@
   "ok": true,
   "chyby": [],
   "varovani": [
-    "Dotykové cíle <40 px na mobilu: 15× (např. a \"info@bartlreality.cz\" 254×27; a \"@voyage_traveler\" 254×27; input \"\" 153×21; input \"\" 20×20)"
+    "Dotykové cíle <40 px na mobilu: 13× (např. input \"\" 1×1; input \"\" 24×24; a \"Lifestyle & jachting\" 128×38; a \"Dobrodružství & divo\" 167×38)"
   ],
   "metriky": {
     "sirky": {
@@ -37,7 +37,7 @@
       "kB": 262,
       "url": "https://webhunter-navrhy.github.io/voyage/img/uvod/prales.webp"
     },
-    "snimku_PC": 12,
+    "snimku_PC": 13,
     "preneseno_mobil_MB": 1.63,
     "nejvetsi_obrazek_mobil": {
       "kB": 262,
@@ -60,7 +60,7 @@
       "canonical": true,
       "viewport": true
     },
-    "maly_dotykovy_cil": 15,
+    "maly_dotykovy_cil": 13,
     "font_nadpis": "Gilda Display",
     "font_text": "Red Hat Text"
   }
