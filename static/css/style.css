@@ -78,8 +78,7 @@ button { font: inherit; color: inherit; }
 .logo-velke { font-size: 2.2rem; }
 
 /* hlavička */
-.hlavicka { position: fixed; inset: 0 0 auto; z-index: 50; height: var(--hlavicka); color: var(--inkoust); background: rgba(244, 239, 230, .94); border-bottom: 1px solid rgba(11, 36, 24, .08); transition: background .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease); }
-@supports (backdrop-filter: blur(1px)) { .hlavicka { background: rgba(244, 239, 230, .8); backdrop-filter: blur(14px) saturate(1.2); } }
+.hlavicka { position: fixed; inset: 0 0 auto; z-index: 50; height: var(--hlavicka); color: var(--inkoust); background: var(--svetla); border-bottom: 1px solid var(--linka); transition: background .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease); }
 .hlavicka-in { height: 100%; width: min(100% - 2 * var(--gutter), 1500px); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
 .menu { display: flex; align-items: center; gap: clamp(1rem, 1.8vw, 2rem); }
 .menu a:not(.btn) { text-decoration: none; font: 500 .76rem/1 var(--text); letter-spacing: .14em; text-transform: uppercase; padding: .8rem 0; position: relative; }
@@ -102,9 +101,14 @@ button { font: inherit; color: inherit; }
 .hero-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
 .hero-foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(1, 20, 8, .78) 0%, rgba(1, 20, 8, .42) 52%, rgba(1, 20, 8, .12) 100%), linear-gradient(0deg, rgba(1, 20, 8, .75) 0%, rgba(1, 20, 8, 0) 45%); }
 .hero-in { padding-top: calc(var(--hlavicka) + 4rem); padding-bottom: clamp(3rem, 7vw, 5.5rem); }
-.hero h1 { font-size: var(--h1); text-transform: uppercase; letter-spacing: .02em; line-height: 1.04; max-width: 19ch; }
+.hero h1 { font-size: clamp(2.7rem, 6vw, 5.8rem); letter-spacing: -.015em; line-height: 1.02; max-width: 13ch; }
 .hero h1 span { display: block; }
-.hero-zlata { color: var(--zlata); }
+.hero-zlata { color: var(--svetla); }
+.hero-kompas { position: absolute; right: max(var(--gutter), (100vw - var(--max)) / 2); top: 50%; width: clamp(16rem, 30vw, 27rem); aspect-ratio: 1; transform: translateY(-58%); color: var(--zlata); opacity: .55; pointer-events: none; }
+.hero-kompas .kompas { width: 100%; height: 100%; color: var(--zlata); stroke-width: .5; }
+.hero-kompas .kompas .k-stred { fill: var(--jungle-deep); }
+.hero-kompas .kompas .k-tick { display: inline; }
+@media (max-width: 820px) { .hero-kompas { display: none; } }
 .hero-perex { max-width: 34rem; margin: 1.8rem 0 2.2rem; color: var(--svetla-2); font-size: clamp(1.02rem, 1rem + .3vw, 1.18rem); }
 .hero-akce { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; }
 .odjezd { display: block; text-decoration: none; color: var(--svetla); border-top: 1px solid rgba(249, 244, 236, .22); background: rgba(1, 20, 8, .5); transition: background .3s var(--ease); }
@@ -235,9 +239,18 @@ button { font: inherit; color: inherit; }
 .pruvodci-pas { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(13rem, 17vw, 15.5rem); gap: clamp(1rem, 2vw, 1.6rem); overflow-x: auto; scroll-snap-type: x mandatory; padding: .3rem max(var(--gutter), (100% - var(--max)) / 2) 1.6rem; scroll-padding-inline: max(var(--gutter), (100% - var(--max)) / 2); scrollbar-width: thin; scrollbar-color: var(--linka) transparent; }
 .pruvodce { scroll-snap-align: start; }
 @media (min-width: 1061px) {
-  .pruvodci-pas { grid-auto-flow: row; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-auto-columns: auto; overflow: visible; width: min(100% - 2 * var(--gutter), var(--max)); margin-inline: auto; padding: .3rem 0 0; row-gap: 3rem; }
+  .pruvodci-pas { grid-auto-flow: row dense; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-columns: auto; overflow: visible; width: min(100% - 2 * var(--gutter), var(--max)); margin-inline: auto; padding: .3rem 0 0; row-gap: 3rem; }
   .sipky { display: none; }
+  .pruvodce-hlavni { grid-column: span 2; grid-row: span 2; }
+  .pruvodce-hlavni .pruvodce-btn { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); grid-template-rows: auto auto auto auto 1fr; column-gap: 1.6rem; align-items: start; height: 100%; }
+  .pruvodce-hlavni .pruvodce-btn > :not(.pruvodce-foto) { grid-column: 2; }
+  .pruvodce-hlavni .pruvodce-role { margin-top: .2rem; }
+  .pruvodce-hlavni .pruvodce-foto { aspect-ratio: auto; height: 100%; margin: 0; grid-column: 1; grid-row: 1 / span 6; }
+  .pruvodce-hlavni .pruvodce-jmeno { font-size: 2rem; }
+  .pruvodce-hlavni .pruvodce-kratce { font-size: 1rem; }
 }
+.pruvodce-bio { display: none; }
+@media (min-width: 1061px) { .pruvodce-hlavni .pruvodce-bio { display: block; } .pruvodce-hlavni .pruvodce-kratce:not(.pruvodce-bio) { display: none; } }
 @media (max-width: 1060px) { .pruvodci-pas { grid-auto-columns: min(78vw, 19rem); } }
 .pruvodci-pozn { font-size: .82rem; color: var(--inkoust-2); margin-top: 1.5rem; }
 .demo-pozn { display: inline-block; font-size: .84rem; color: var(--inkoust-2); background: var(--pisek); border-left: 2px solid var(--zlata-ink); padding: .6rem .9rem; margin: -1rem 0 2rem; }
@@ -293,7 +306,7 @@ button { font: inherit; color: inherit; }
 .kontakty { margin-top: 2.2rem; }
 .kontakty li { display: grid; grid-template-columns: 6rem 1fr; padding: .85rem 0; border-top: 1px solid var(--linka); }
 .kontakty span { color: var(--inkoust-2); font-size: .82rem; letter-spacing: .06em; padding-top: .15rem; }
-.kontakty a { text-decoration: none; overflow-wrap: anywhere; }
+.kontakty a { text-decoration: none; overflow-wrap: anywhere; display: inline-flex; align-items: center; min-height: 44px; margin-block: -.6rem; }
 .kontakty a:hover { text-decoration: underline; }
 .formular { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem 1.5rem; background: var(--svetla); padding: clamp(1.4rem, 3vw, 2.5rem); border: 1px solid var(--linka); }
 .pole { display: flex; flex-direction: column; gap: .45rem; font-size: .8rem; letter-spacing: .06em; color: var(--inkoust-2); }
@@ -304,9 +317,10 @@ button { font: inherit; color: inherit; }
 .pole input:focus, .pole select:focus, .pole textarea:focus { outline: none; border-color: var(--jungle); background: #fff; }
 .pole textarea { resize: vertical; }
 .pole .chyba { border-color: #8a3b1e; }
-.past { position: absolute; left: -9999px; }
+.past { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.past input { width: 1px; height: 1px; padding: 0; border: 0; }
 .souhlas { display: flex; gap: .7rem; align-items: flex-start; font-size: .86rem; color: var(--inkoust-2); cursor: pointer; }
-.souhlas input { width: 1.25rem; height: 1.25rem; margin: .1rem 0 0; accent-color: var(--jungle); flex: none; }
+.souhlas input { width: 1.5rem; height: 1.5rem; margin: .1rem 0 0; accent-color: var(--jungle); flex: none; }
 .formular-pata { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
 .formular-stav { margin: 0; font-size: .92rem; }
 .formular-stav.ok { color: var(--jungle-2); }
