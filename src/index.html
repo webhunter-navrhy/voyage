@@ -139,6 +139,7 @@
         <p class="sekce-text">{{ T.pruvodci.text|nb }}</p>
       </div>
     </header>
+    {% if site.navrh %}<p class="demo-pozn">Fotky a profily průvodců jsou zatím ukázka převzatá z Vašeho prototypu – skutečné doplníte v administraci.</p>{% endif %}
   </div>
   <ul class="pruvodci-pas" role="list" data-pas aria-label="Průvodci VOYAGE">
     {% for p in pruvodci %}
@@ -165,7 +166,6 @@
     </li>
     {% endfor %}
   </ul>
-  {% if site.navrh %}<div class="wrap"><p class="pruvodci-pozn">Fotky a profily průvodců jsou převzaté z prototypu – skutečné doplníte v administraci.</p></div>{% endif %}
 </section>
 
 <section class="sekce spoluprace" aria-label="Spolupráce">

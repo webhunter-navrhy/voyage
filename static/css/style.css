@@ -6,7 +6,7 @@
   --pisek-3: #e2d8c6;
   --linka: #d3c8b6;
   --inkoust: #0b2418;
-  --inkoust-2: #46554b;
+  --inkoust-2: #3d4a41;
   --jungle: #092414;
   --jungle-2: #12331f;
   --jungle-deep: #011408;
@@ -274,11 +274,11 @@ button { font: inherit; color: inherit; }
 .panel { position: relative; display: block; min-height: clamp(24rem, 38vw, 32rem); overflow: hidden; color: var(--svetla); text-decoration: none; isolation: isolate; background: var(--jungle); }
 .panel-foto { position: absolute; inset: 0; z-index: -1; }
 .panel-foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
-.panel-foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(1, 20, 8, .94) 0%, rgba(1, 20, 8, .78) 38%, rgba(1, 20, 8, .25) 72%, rgba(1, 20, 8, .1) 100%); }
+.panel-foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(1, 20, 8, .92) 0%, rgba(1, 20, 8, .6) 34%, rgba(1, 20, 8, 0) 62%); }
 .panel:hover .panel-foto img { transform: scale(1.04); }
 .panel-text { position: absolute; inset: auto 0 0; padding: clamp(1.5rem, 3vw, 2.5rem); display: flex; flex-direction: column; gap: .8rem; }
-.panel-h { font: 400 clamp(1.8rem, 3vw, 2.6rem)/1.05 var(--display); }
-.panel-p { max-width: 30rem; color: var(--svetla-2); font-size: .98rem; }
+.panel-h { font: 400 clamp(2rem, 3.4vw, 3rem)/1.05 var(--display); }
+.panel-p { max-width: 30rem; color: var(--svetla); font-size: 1.05rem; }
 .panel-odkaz { font: 500 .78rem/1 var(--text); letter-spacing: .14em; text-transform: uppercase; color: var(--zlata); }
 
 /* FAQ */
