@@ -113,6 +113,7 @@
     const oblouk = (r, a1, a2) => { const [x1, y1] = bod(r, a1), [x2, y2] = bod(r, a2); return `M${x1.toFixed(2)} ${y1.toFixed(2)} A${r} ${r} 0 ${a2 - a1 > 180 ? 1 : 0} 1 ${x2.toFixed(2)} ${y2.toFixed(2)}`; };
     const MES = ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro'];
     const R_VNEJ = 250, DRAHY = [222, 196, 170, 144];
+    const mobil = matchMedia('(max-width: 1060px)').matches; /* na mobilu ovládají kalendář pilulky pod kompasem */
 
     el('circle', { r: R_VNEJ, class: 'kr-kruh' });
     el('circle', { r: 126, class: 'kr-kruh kr-kruh-in' });
@@ -142,8 +143,10 @@
       const r = DRAHY[lane];
       let a1 = uhel(od), a2 = uhel(new Date(dok.getFullYear(), dok.getMonth(), dok.getDate() + 1));
       if (a2 - a1 < 3.5) { const s = (a1 + a2) / 2; a1 = s - 1.75; a2 = s + 1.75; }
-      const g = el('a', { href: e.url, class: 'kr-oblouk' + (e.volna <= 2 ? ' malo' : ''), 'data-slug': e.slug, 'aria-label': `${e.nazev}, ${e.termin}` });
-      el('title', {}, g).textContent = `${e.nazev} · ${e.termin}`;
+      const g = mobil
+        ? el('g', { class: 'kr-oblouk kr-dekor' + (e.volna <= 2 ? ' malo' : ''), 'data-slug': e.slug, 'aria-hidden': 'true' })
+        : el('a', { href: e.url, class: 'kr-oblouk' + (e.volna <= 2 ? ' malo' : ''), 'data-slug': e.slug, 'aria-label': `${e.nazev}, ${e.termin}` });
+      if (!mobil) el('title', {}, g).textContent = `${e.nazev} · ${e.termin}`;
       const p = oblouk(r, a1, a2);
       el('path', { d: p, class: 'kr-hit' }, g);
       el('path', { d: p, class: 'kr-car' }, g);

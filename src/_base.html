@@ -76,7 +76,7 @@
     </div>
   </div>
   <div class="wrap paticka-spodek">
-    <p>© {{ rok }} {{ site.nazev }}{% if site.provozovatel %} · {{ site.provozovatel }}{% endif %}{% if site.ico %} · IČO {{ site.ico }}{% endif %}</p>
+    <p>© {{ rok }} {{ site.nazev }}{% if site.provozovatel %} · {{ site.provozovatel }}{% endif %}{% if site.ico %} · IČO {{ site.ico }}{% endif %}{% if site.navrh and not site.provozovatel %} · Provozovatel zájezdů, IČO a obchodní podmínky doplníme{% endif %}</p>
     <p><a href="{{ base }}admin/">Administrace</a></p>
   </div>
 </footer>

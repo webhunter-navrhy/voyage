@@ -32,18 +32,18 @@
         "pocet_pretekajicich": 9
       }
     },
-    "preneseno_PC_MB": 1.52,
+    "preneseno_PC_MB": 1.34,
     "nejvetsi_obrazek_PC": {
       "kB": 262,
       "url": "https://webhunter-navrhy.github.io/voyage/img/uvod/prales.webp"
     },
-    "snimku_PC": 13,
-    "preneseno_mobil_MB": 2.35,
+    "snimku_PC": 11,
+    "preneseno_mobil_MB": 1.8,
     "nejvetsi_obrazek_mobil": {
       "kB": 262,
       "url": "https://webhunter-navrhy.github.io/voyage/img/uvod/prales.webp"
     },
-    "snimku_mobil": 19,
+    "snimku_mobil": 12,
     "seo": {
       "title": "VOYAGE – expedice v malých skupinách",
       "description": "Expediční výpravy v malých skupinách s propracovaným programem. Termíny, itineráře den po dni, ceny ",

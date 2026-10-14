@@ -82,6 +82,7 @@
       </div>
       <p class="sekce-text">{{ T.expedice.text|nb }}</p>
     </header>
+    {% if site.navrh %}<p class="demo-pozn">Termíny, ceny a volná místa jsou zatím ukázkové podle Vašeho prototypu – v administraci je upravíte během minuty.</p>{% endif %}
     <div class="filtr" role="group" aria-label="Filtrovat expedice">
       <button type="button" class="filtr-btn" aria-pressed="true" data-filtr="">Všechny cesty</button>
       {% for k in T.kategorie %}<button type="button" class="filtr-btn" aria-pressed="false" data-filtr="{{ k.id }}">{{ k.nazev }}</button>{% endfor %}
@@ -164,6 +165,7 @@
     </li>
     {% endfor %}
   </ul>
+  {% if site.navrh %}<div class="wrap"><p class="pruvodci-pozn">Fotky a profily průvodců jsou převzaté z prototypu – skutečné doplníte v administraci.</p></div>{% endif %}
 </section>
 
 <section class="sekce spoluprace" aria-label="Spolupráce">
