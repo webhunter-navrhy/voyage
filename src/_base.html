@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ titulek }}</title>
+<meta name="description" content="{{ popis or site.popis }}">
+{% if site.navrh %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<meta name="theme-color" content="{{ site.theme_color }}">
+<link rel="canonical" href="{{ url_webu }}{{ cesta if cesta != '404.html' else '' }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="{{ site.nazev }}">
+<meta property="og:title" content="{{ titulek }}">
+<meta property="og:description" content="{{ popis or site.popis }}">
+<meta property="og:url" content="{{ url_webu }}{{ cesta }}">
+{% if og %}<meta property="og:image" content="{{ url_webu }}{{ og }}">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">{% endif %}
+<link rel="icon" href="{{ base }}favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{ base }}fonts/gildadisplay-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+{% set logo_svg %}<svg class="kompas" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false"><circle r="46"/><circle r="38" class="k-in"/>{% for i in range(16) %}<line x1="38" y1="0" x2="33" y2="0" class="k-tick" transform="rotate({{ i * 22.5 }})"/>{% endfor %}{% for r in (0, 90, 180, 270) %}<polygon points="0,-44 3,0 0,4 -3,0" transform="rotate({{ r }})" class="k-hrot"/>{% endfor %}{% for r in (45, 135, 225, 315) %}<polygon points="0,-30 2,0 0,3 -2,0" transform="rotate({{ r }})" class="k-hrot k-hrot2"/>{% endfor %}<circle r="5.5" class="k-hrot"/><circle r="2.4" class="k-stred"/></svg>{% endset %}
+<header class="hlavicka" data-hlavicka>
+  <div class="hlavicka-in">
+    <a href="{{ url('') }}" class="logo" aria-label="VOYAGE – úvodní stránka"><span>V</span>{{ logo_svg|safe }}<span>YAGE</span></a>
+    <nav class="menu" id="menu" aria-label="Hlavní menu">
+      <a href="{{ url('') }}#expedice">Expedice</a>
+      <a href="{{ url('') }}#kalendar">Kalendář</a>
+      <a href="{{ url('') }}#pruvodci">Průvodci</a>
+      <a href="{{ url('o-nas') }}"{% if cesta == 'o-nas/' %} aria-current="page"{% endif %}>O nás</a>
+      <a href="{{ url('privatni-cesty') }}"{% if cesta == 'privatni-cesty/' %} aria-current="page"{% endif %}>Privátní cesty</a>
+      <a href="{{ url('pro-influencery') }}"{% if cesta == 'pro-influencery/' %} aria-current="page"{% endif %}>Pro influencery</a>
+      <a href="{{ url('') }}#faq">FAQ</a>
+      <a href="{{ url('') }}#prihlaska" class="btn btn-maly menu-cta">Chci jet</a>
+    </nav>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Menu</span></button>
+  </div>
+</header>
+<main id="obsah">
+{% block obsah %}{% endblock %}
+</main>
+<footer class="paticka">
+  <div class="wrap paticka-grid">
+    <div class="paticka-znacka">
+      <a href="{{ url('') }}" class="logo logo-velke" aria-label="VOYAGE"><span>V</span>{{ logo_svg|safe }}<span>YAGE</span></a>
+      <p>{{ T.paticka|nb }}</p>
+    </div>
+    <div>
+      <h2 class="paticka-h">Expedice</h2>
+      <ul role="list">
+        {% for k in T.kategorie %}<li><a href="{{ url('') }}?kategorie={{ k.id }}#expedice">{{ k.nazev }}</a></li>{% endfor %}
+        <li><a href="{{ url('') }}#kalendar">Kalendář výprav</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="paticka-h">Studio</h2>
+      <ul role="list">
+        <li><a href="{{ url('o-nas') }}">O nás</a></li>
+        <li><a href="{{ url('privatni-cesty') }}">Privátní cesty</a></li>
+        <li><a href="{{ url('pro-influencery') }}">Pro influencery</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="paticka-h">Kontakt</h2>
+      <ul role="list">
+        {% if site.email %}<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>{% endif %}
+        {% if site.instagram %}<li><a href="{{ site.instagram }}" rel="noopener" target="_blank">Instagram {{ site.instagram_jmeno }}</a></li>{% endif %}
+        <li><a href="{{ url('') }}#prihlaska">Přihláška na expedici</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap paticka-spodek">
+    <p>© {{ rok }} {{ site.nazev }}{% if site.provozovatel %} · {{ site.provozovatel }}{% endif %}{% if site.ico %} · IČO {{ site.ico }}{% endif %}</p>
+    <p><a href="{{ base }}admin/">Administrace</a></p>
+  </div>
+</footer>
+<script src="{{ asset('js/main.js') }}" defer></script>
+{% block skripty %}{% endblock %}
+</body>
+</html>

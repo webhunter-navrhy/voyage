@@ -1,0 +1,119 @@
+[
+ {
+  "id": "michal",
+  "jmeno": "Mgr. Michal Bartl",
+  "role": "Zakladatel & Head of Expeditions",
+  "kratce": "Vizionář stojící za konceptem VOYAGE. Spojuje lidi z byznysu a reality na těch nejexkluzivnějších místech planety.",
+  "bio": "Vizionář stojící za konceptem VOYAGE. Spojuje lidi z byznysu a reality na těch nejexkluzivnějších místech planety. Specializuje se na business networking, VIP zážitky, organizaci a krizový management.",
+  "zamereni": "Business networking · VIP zážitky · organizace · krizový management",
+  "foto": {
+   "src": "img/pruvodci/michal.webp",
+   "w": 1024,
+   "h": 1024
+  }
+ },
+ {
+  "id": "adela",
+  "jmeno": "Adéla Kaššová",
+  "role": "Co-founder & Lifestyle Director",
+  "kratce": "Má na starosti, aby každá expedice měla dokonalý vizuální styl, prémiový komfort a nezapomenutelnou atmosféru.",
+  "bio": "Adéla je duší lifestylové stránky VOYAGE. Dohlíží na výběr vil, jachet a detailů, které dělají cestu prémiovou. Na místě koordinuje program a stará se o to, aby vše plynulo přesně tak, jak má.",
+  "zamereni": "Lifestyle expedice · jachting · koordinace na místě · content creation",
+  "foto": {
+   "src": "img/pruvodci/adela.webp",
+   "w": 880,
+   "h": 1100
+  }
+ },
+ {
+  "id": "klara",
+  "jmeno": "Klára",
+  "role": "Media & Jachting Guide",
+  "kratce": "Profesionální content creatorka, která se stará o to, aby si klienti odvezli z expedic ty nejlepší fotky a Reels.",
+  "bio": "Klára doprovází lifestylové cesty a plavby na jachtách. Kromě natáčení a focení pomáhá klientům budovat jejich vlastní obsah — od kompozice záběrů až po střih Reels přímo z paluby.",
+  "zamereni": "Jachting · Provence · Thajsko · foto & video produkce · Instagram marketing",
+  "foto": {
+   "src": "img/pruvodci/klara.webp",
+   "w": 1024,
+   "h": 1024
+  }
+ },
+ {
+  "id": "tereza",
+  "jmeno": "Tereza",
+  "role": "Wellness & Active Guide",
+  "kratce": "Certifikovaná instruktorka a milovnice hor. Na expedicích drží ranní rituály, aktivní program a férovou porci vzduchu.",
+  "bio": "Tereza se stará o fyzickou pohodu skupiny — vede ranní jógu, doprovází surfové kempy, horské treky a rituály v přírodě. Umí naladit den tak, aby si každý našel své tempo.",
+  "zamereni": "Madeira · surfové kempy · horské treky · jóga & rituály",
+  "foto": {
+   "src": "img/pruvodci/tereza.webp",
+   "w": 880,
+   "h": 1100
+  }
+ },
+ {
+  "id": "petr",
+  "jmeno": "Petr",
+  "role": "Offroad & Survival Specialist",
+  "kratce": "Bývalý člen expedičních týmů, expert na přežití v divočině a technické zajištění náročných offroad výprav.",
+  "bio": "Petra nic nepřekvapí. Vede offroad výpravy v Albánii, plánuje logistiku v Kongu a v Amazonii a v týmu má na starosti bezpečnost, techniku a první pomoc. Když se něco pokazí, Petr už to řeší.",
+  "zamereni": "Albánie offroad · Kongo · Amazonie · extrémní divočina · první pomoc",
+  "foto": {
+   "src": "img/pruvodci/petr.webp",
+   "w": 880,
+   "h": 1100
+  }
+ },
+ {
+  "id": "jan",
+  "jmeno": "Jan",
+  "role": "Polar & Alpine Guide",
+  "kratce": "Certifikovaný horský vůdce, který strávil roky za polárním kruhem. Specialista na arktickou logistiku a bezpečnost v ledu.",
+  "bio": "Jan vede naše nejchladnější a nejvyšší výpravy — od Laponska přes Arktidu a Aljašku až po výstup na Kilimandžáro. Umí číst led, sníh i počasí a stopovat divokou zvěř.",
+  "zamereni": "Laponsko · Arktida · Aljaška · Kilimandžáro",
+  "foto": {
+   "src": "img/pruvodci/jan.webp",
+   "w": 880,
+   "h": 1100
+  }
+ },
+ {
+  "id": "bata",
+  "jmeno": "Bat-Erdene „Bata“",
+  "role": "Mongolia & Expedition Specialist",
+  "kratce": "Rodilý Mongol se skvělou znalostí lokálního prostředí i západní mentality. Zná každý kout mongolské stepi i pouště Gobi.",
+  "bio": "Bata je rodilý Mongol a náš člověk pro nejautentičtější výpravy do stepi a pouště Gobi. Pro klienty zajišťuje absolutně bezpečný, ale 100% autentický průchod divočinou a přístup do uzavřených nomádských komunit, které běžný cestovatel nikdy neuvidí.",
+  "zamereni": "Mongolsko · přežití ve stepi · offroad logistika · nomádská kultura",
+  "foto": {
+   "src": "img/pruvodci/bata.webp",
+   "w": 880,
+   "h": 1100
+  }
+ },
+ {
+  "id": "tomas",
+  "jmeno": "Tomáš Vlček",
+  "role": "Hlavní expediční stratég",
+  "kratce": "Horolezec, průvodce a specialista na logistiku a přežití v divočině s 14 lety zkušeností v terénu.",
+  "bio": "Tomáš vede ty nejnáročnější výpravy VOYAGE. Roky strávené v horách a divočině z něj udělaly člověka, kterému věříte na slovo – ať řešíte trek nad mraky, nocování v lodge uprostřed pralesa nebo orientaci v patagonské bouři.",
+  "zamereni": "Náročné treky · divoká příroda · hory (Skandinávie, Jižní Amerika)",
+  "foto": {
+   "src": "img/pruvodci/tomas.webp",
+   "w": 768,
+   "h": 768
+  }
+ },
+ {
+  "id": "niki",
+  "jmeno": "Zoey „Niki“ dela Cruz",
+  "role": "Asia Expedition Specialist",
+  "kratce": "Charismatická expertka na skryté klenoty jihovýchodní Asie, která se stará o to, abyste v exotice zažili ta nejautentičtější místa a skrytá zákoutí bez turistických pastí.",
+  "bio": "Niki vyrostla v Asii a zná místní komunity zevnitř. Vybírá pro nás ostrovní hideouty, lokální průvodce a zážitky, ke kterým se běžný turista nikdy nedostane.",
+  "zamereni": "Jihovýchodní Asie · ostrovní expedice (Filipíny, Indonésie, Thajsko)",
+  "foto": {
+   "src": "img/pruvodci/niki.webp",
+   "w": 884,
+   "h": 1024
+  }
+ }
+]

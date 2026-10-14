@@ -1,0 +1,142 @@
+{% extends "_base.html" %}
+{% from "_makra.html" import karta, formular, body5 %}
+{% block body_class %}detail{% endblock %}
+{% block head %}
+{% set it = [] %}
+{% for d in e.program %}{% set _ = it.append({"@type": "ListItem", "position": loop.index, "item": {"@type": "TouristAttraction", "name": d.nazev, "description": d.text}}) %}{% endfor %}
+{% set trip = {"@context": "https://schema.org", "@type": "TouristTrip", "name": e.nazev, "description": e.perex, "touristType": e.typ,
+  "image": url_webu ~ e.foto.src, "url": url_webu ~ cesta, "provider": {"@id": url_webu ~ "#org"},
+  "itinerary": {"@type": "ItemList", "itemListElement": it}} %}
+{% if not e.termin_text %}{% set _ = trip.update({"startDate": e.od, "endDate": e.do}) %}{% endif %}
+{% set cislo = e.cena|replace(' ', '')|replace(' ', '')|replace('Kč', '') %}
+{% if cislo is number or cislo|int > 0 %}{% set _ = trip.update({"offers": {"@type": "Offer", "price": cislo|int, "priceCurrency": "CZK", "availability": "https://schema.org/" ~ ("InStock" if e.volna_mista|int > 0 else "SoldOut"), "url": url_webu ~ cesta}}) %}{% endif %}
+<script type="application/ld+json">{{ ld(trip) }}</script>
+<script type="application/ld+json">{{ ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+  {"@type": "ListItem", "position": 1, "name": "Expedice", "item": url_webu ~ "#expedice"},
+  {"@type": "ListItem", "position": 2, "name": e.nazev, "item": url_webu ~ cesta}]}) }}</script>
+{% endblock %}
+{% block obsah %}
+{% set D = T.detail %}
+{% set obsazeno = e.volna_mista|int <= 0 %}
+<article class="exp" data-expedice data-od="{{ e.od }}" data-do="{{ e.do }}">
+  <header class="exp-hero">
+    <div class="exp-hero-text">
+      <nav class="drobky" aria-label="Drobečková navigace"><a href="{{ url('') }}#expedice">Expedice</a> <span aria-hidden="true">/</span> <span>{{ kat.get(e.kategorie, '') }}</span></nav>
+      {% if e.stitek %}<p class="exp-stitek">{{ e.stitek }}</p>{% endif %}
+      <h1>{{ e.nazev|nb }}</h1>
+      <p class="exp-lokace">{{ e.lokace }}</p>
+      <p class="exp-termin"><span>{{ e|termin }}</span>{% if e|delka %}<span>{{ e|delka }}</span>{% endif %}</p>
+      <p class="exp-probehla" data-probehla {% if not e.probehla %}hidden{% endif %}>Tahle expedice už proběhla. Napiš nám, pokud chceš vědět o dalším termínu.</p>
+      <div class="exp-akce">
+        <a href="#prihlaska" class="btn">{{ 'Zapsat se jako náhradník' if obsazeno else 'Přihlásit se' }}</a>
+        {% if e.program %}<a href="#program" class="odkaz">{{ D.den_po_dni }}</a>{% endif %}
+      </div>
+    </div>
+    <div class="exp-hero-foto">{{ img(e.foto, e.foto.alt or e.nazev, sizes='(min-width: 900px) 46vw, 100vw', eager=True) }}</div>
+  </header>
+
+  <section class="exp-karta" aria-label="Základní údaje">
+    <dl class="wrap fakta">
+      <div class="fakt fakt-cena"><dt>Cena</dt><dd><span class="cena">{{ e.cena|nb }}</span>{% if e.cena_pozn %}<small>{{ e.cena_pozn }}</small>{% endif %}</dd></div>
+      <div class="fakt"><dt>Termín</dt><dd>{{ e|termin_kratce }}{% if e|delka %}<small>{{ e|delka }}</small>{% endif %}</dd></div>
+      <div class="fakt"><dt>Skupina</dt><dd>{{ e.skupina }}<small>{{ e.typ }}</small></dd></div>
+      <div class="fakt"><dt>Volná místa</dt><dd class="{% if e.volna_mista|int <= 2 %}malo{% endif %}">{{ e.volna_mista|mista }}{% if e.kapacita %}<span class="mista-pruh" aria-hidden="true">{% for i in range(e.kapacita|int) %}<i{% if i >= e.kapacita|int - e.volna_mista|int %} class="volne"{% endif %}></i>{% endfor %}</span>{% endif %}</dd></div>
+      <div class="fakt"><dt>Náročnost</dt><dd>{{ body5(e.narocnost|int, 'Náročnost') }}</dd></div>
+      <div class="fakt"><dt>Komfort</dt><dd>{{ body5(e.komfort|int, 'Komfort') }}</dd></div>
+    </dl>
+  </section>
+
+  {% if e.trasa %}
+  <section class="trasa" aria-labelledby="trasa-h">
+    <div class="wrap">
+      <h2 id="trasa-h" class="mini-h">Trasa</h2>
+      <ol class="trasa-body" role="list">
+        {% for b in e.trasa.split('·') %}<li><span>{{ b.strip() }}</span></li>{% endfor %}
+      </ol>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="sekce exp-popis" aria-labelledby="popis-h">
+    <div class="wrap exp-popis-grid">
+      <div>
+        <h2 id="popis-h" class="sr">O expedici</h2>
+        <div class="perex-velky">{{ e.perex|odstavce }}</div>
+      </div>
+      {% if e.zazitky %}
+      <div class="zazitky">
+        <h3 class="mini-h">{{ D.zazitky }}</h3>
+        <ul role="list">{% for z in e.zazitky %}<li>{{ z|nb }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  {% if e.program %}
+  <section class="sekce program" id="program" aria-labelledby="program-h">
+    <div class="wrap program-grid">
+      <header class="program-hlava">
+        <p class="nadtitulek">Itinerář</p>
+        <h2 id="program-h">{{ (e.nazev.split(':')[0])|nb }} den po dni</h2>
+        <p class="sekce-text">Program je připravený, ale nic není povinné. Když si chceš dát den pro sebe, dáš si ho.</p>
+      </header>
+      <ol class="dny" role="list">
+        {% for d in e.program %}
+        <li class="den">
+          <span class="den-cislo">{{ d.den }}</span>
+          <h3>{{ d.nazev|nb }}</h3>
+          <p>{{ d.text|nb }}</p>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="sekce exp-cena" aria-labelledby="exp-cena-h">
+    <div class="wrap exp-cena-grid">
+      <div>
+        <h2 id="exp-cena-h">{{ T.cena.h3|nb }}</h2>
+        <p class="sekce-text">{{ T.cena.text|nb }}</p>
+      </div>
+      <div class="cena-box cena-box-svetly">
+        <p class="cena-velka">{{ e.cena|nb }}{% if e.cena_pozn %} <small>{{ e.cena_pozn }}</small>{% endif %}</p>
+        <ul role="list" class="v-cene">{% for b in (e.v_cene or T.cena.v_cene) %}<li>{{ b|nb }}</li>{% endfor %}</ul>
+        <div class="letenky"><p class="letenky-h">{{ T.cena.letenky_h }}</p><p>{{ T.cena.letenky|nb }}</p></div>
+      </div>
+    </div>
+  </section>
+
+  {% if e.galerie %}
+  <section class="sekce galerie" aria-labelledby="galerie-h">
+    <div class="wrap">
+      <h2 id="galerie-h">{{ D.galerie }}</h2>
+      <ul class="galerie-mriz" role="list" data-galerie>
+        {% for f in e.galerie %}<li><a href="{{ base }}{{ f.src }}" data-lightbox>{{ img(f, f.alt or (e.nazev ~ ' – fotka ' ~ loop.index), sizes='(min-width: 900px) 30vw, 46vw') }}</a></li>{% endfor %}
+      </ul>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="sekce prihlaska" id="prihlaska" aria-labelledby="prihlaska-h">
+    <div class="wrap prihlaska-grid">
+      <header>
+        <p class="nadtitulek">{{ e.nazev.split(':')[0] }} · {{ e|termin_kratce }}</p>
+        <h2 id="prihlaska-h">{{ D.prihlaska_h }}</h2>
+        <p class="sekce-text">{{ (D.nahradnik_text if obsazeno else D.prihlaska_text)|nb }}</p>
+      </header>
+      {{ formular(e) }}
+    </div>
+  </section>
+
+  {% if dalsi %}
+  <section class="sekce dalsi" aria-labelledby="dalsi-h">
+    <div class="wrap">
+      <h2 id="dalsi-h">{{ D.dalsi }}</h2>
+      <div class="karty karty-3">{% for x in dalsi %}{{ karta(x) }}{% endfor %}</div>
+    </div>
+  </section>
+  {% endif %}
+</article>
+<dialog class="lightbox" data-lightbox-dialog aria-label="Fotka"><img alt="" data-lightbox-img><button type="button" class="dialog-zavrit" data-zavrit aria-label="Zavřít">×</button></dialog>
+{% endblock %}

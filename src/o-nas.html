@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+{% block body_class %}podstranka{% endblock %}
+{% block obsah %}
+{% set S = T.o_nas %}
+<section class="pod-hero">
+  <div class="wrap pod-grid">
+    <div>
+      <p class="nadtitulek">O nás</p>
+      <h1>{{ S.h1|nb }}</h1>
+      <div class="pod-text">{{ S.text|odstavce }}</div>
+    </div>
+    <div class="pod-foto">{{ img('img/uvod/prales.webp', '', sizes='(min-width: 900px) 40vw, 92vw', eager=True) }}</div>
+  </div>
+</section>
+<section class="sekce jak">
+  <div class="wrap jak-grid">
+    <div>
+      <p class="nadtitulek nadtitulek-svetly">Naše DNA</p>
+      <h2>{{ T.jak.h2|nb }}</h2>
+      <ul class="jak-body" role="list">{% for b in T.jak.body %}<li>{{ b|nb }}</li>{% endfor %}</ul>
+    </div>
+    <aside class="cena-box">
+      <h3>{{ T.pruvodci.h2|nb }}</h3>
+      <p>{{ T.pruvodci.text|nb }}</p>
+      <p><a class="odkaz-svetly" href="{{ url('') }}#pruvodci">Poznej průvodce →</a></p>
+    </aside>
+  </div>
+</section>
+<section class="sekce pod-cta">
+  <div class="wrap pod-cta-in">
+    <h2>Kam vyrazíme spolu?</h2>
+    <a href="{{ url('') }}#expedice" class="btn">Vybrat expedici</a>
+  </div>
+</section>
+{% endblock %}

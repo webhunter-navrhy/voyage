@@ -1,0 +1,856 @@
+[
+ {
+  "slug": "havaj-sopky",
+  "skryta": false,
+  "nazev": "Havaj: Výprava na aktivní sopky",
+  "lokace": "Big Island · Kauai",
+  "trasa": "Honolulu · Big Island · Volcanoes NP · Kauai · Na Pali Coast",
+  "od": "2026-10-22",
+  "do": "2026-10-31",
+  "termin_text": "",
+  "kategorie": "dobrodruzstvi",
+  "typ": "Vulkanická expedice",
+  "stitek": "",
+  "skupina": "6–8 osob",
+  "kapacita": 8,
+  "volna_mista": 3,
+  "cena": "148 000 Kč",
+  "cena_pozn": "pozemní program / osoba",
+  "narocnost": 3,
+  "komfort": 3,
+  "perex": "Tekoucí láva vlévající se do oceánu, treky přes měsíční kráterové krajiny a helikoptérový let nad chrlícími sopkami. Nejdivočejší kombinace ohně a vody na planetě.",
+  "zazitky": [
+   "Noční pozorování tekoucí lávy",
+   "Helikoptéra nad kráterem Kilauea",
+   "Trek Na Pali Coast na Kauai",
+   "Surfing na severním pobřeží Oahu"
+  ],
+  "program": [
+   {
+    "den": "Den 01",
+    "nazev": "Honolulu & Welcome",
+    "text": "Přílet, ubytování a večerní luau."
+   },
+   {
+    "den": "Den 02",
+    "nazev": "Přelet na Big Island",
+    "text": "Přesun a orientační brief v jungle lodge."
+   },
+   {
+    "den": "Den 03",
+    "nazev": "Volcanoes NP",
+    "text": "Trek přes kráter Kilauea a lávová pole."
+   },
+   {
+    "den": "Den 04",
+    "nazev": "Lava night hike",
+    "text": "Noční expedice za tekoucí lávou u pobřeží."
+   },
+   {
+    "den": "Den 05",
+    "nazev": "Helikoptéra",
+    "text": "Let nad chrlící sopkou z ptačí perspektivy."
+   },
+   {
+    "den": "Den 06",
+    "nazev": "Přelet na Kauai",
+    "text": "Přesun na nejzelenější ostrov a večerní BBQ."
+   },
+   {
+    "den": "Den 07",
+    "nazev": "Na Pali Coast",
+    "text": "Trek podél dramatického pobřežního útesu."
+   },
+   {
+    "den": "Den 08",
+    "nazev": "Surf & Waimea",
+    "text": "Kaňon Waimea a odpolední surf lesson."
+   },
+   {
+    "den": "Den 09–10",
+    "nazev": "Farewell & Odlet",
+    "text": "Poslední oceán a transfery."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/havaj-sopky.webp",
+   "w": 1280,
+   "h": 1600,
+   "alt": "Havaj: Výprava na aktivní sopky"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "amazonie",
+  "skryta": false,
+  "nazev": "Amazonie: Hluboká džungle a moudrost kmenů",
+  "lokace": "Brazílie — Amazonka",
+  "trasa": "Manaus · soutok Rio Negro · Amazonka · domorodé komunity · Manaus",
+  "od": "2026-11-05",
+  "do": "2026-11-14",
+  "termin_text": "",
+  "kategorie": "dobrodruzstvi",
+  "typ": "Dobrodružná expedice",
+  "stitek": "",
+  "skupina": "6–8 osob",
+  "kapacita": 8,
+  "volna_mista": 3,
+  "cena": "98 500 Kč",
+  "cena_pozn": "pozemní program / osoba",
+  "narocnost": 3,
+  "komfort": 2,
+  "perex": "Expedice po řece Amazonce, divoká příroda a digitální detox. Návrat k absolutním kořenům lidstva v kombinaci s expedičním komfortem — plavba na privátní stylové říční lodi hluboko do nitra pralesa, autentická setkání s domorodými kmeny, noční stopování kajmanů a totální restart mysli.",
+  "zazitky": [
+   "Privátní stylová expediční říční loď",
+   "Autentická setkání s domorodými kmeny",
+   "Noční stopování kajmanů na kánoích",
+   "Digitální detox v srdci pralesa"
+  ],
+  "program": [
+   {
+    "den": "Den 01",
+    "nazev": "Manaus & Nalodění",
+    "text": "Přílet do Manausu, ubytování ve stylovém hotelu a večerní brief s expedičním vedoucím."
+   },
+   {
+    "den": "Den 02",
+    "nazev": "Soutok Rio Negro",
+    "text": "Vyplutí, pozorování slavného soutoku černé a hnědé vody a první džungle treking."
+   },
+   {
+    "den": "Den 03–05",
+    "nazev": "Hluboko v pralese",
+    "text": "Plavba hluboko po Amazonce, denní expedice za faunou a noční stopování kajmanů."
+   },
+   {
+    "den": "Den 06–07",
+    "nazev": "Domorodé kmeny",
+    "text": "Návštěva spřátelené komunity, sdílení rituálů a tradiční gastronomie."
+   },
+   {
+    "den": "Den 08",
+    "nazev": "Anaconda spot & Ticho",
+    "text": "Expedice na lokalitu výskytu anakond, odpoledne meditace a digitální detox."
+   },
+   {
+    "den": "Den 09",
+    "nazev": "Návrat & Reflexe",
+    "text": "Plavba zpět k Manausu, závěrečný kruh a sdílení."
+   },
+   {
+    "den": "Den 10",
+    "nazev": "Farewell & Odlet",
+    "text": "Brunch v Manausu a transfery na letiště."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/amazonie.webp",
+   "w": 1080,
+   "h": 1920,
+   "alt": "Amazonie: Hluboká džungle a moudrost kmenů"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "thajsko-yee-peng",
+  "skryta": false,
+  "nazev": "Thajsko: Lampionový festival Chiang Mai",
+  "lokace": "Chiang Mai, sever Thajska",
+  "trasa": "Bangkok · Chiang Mai · Doi Suthep · sloní rezervace",
+  "od": "2026-11-06",
+  "do": "2026-11-14",
+  "termin_text": "",
+  "kategorie": "lifestyle",
+  "typ": "Kulturní lifestyle",
+  "stitek": "Speciální host",
+  "skupina": "8–10 osob",
+  "kapacita": 10,
+  "volna_mista": 5,
+  "cena": "78 500 Kč",
+  "cena_pozn": "pozemní program / osoba",
+  "narocnost": 1,
+  "komfort": 4,
+  "perex": "Tisíce světel, buddhistické chrámy a exotický lifestyle. Zažijte magický festival Yee Peng na severu Thajska — tisíce svítících lampionů stoupajících k nebi, privátní návštěvu chrámů, thajské masážní rituály a luxusní resort v džungli.",
+  "zazitky": [
+   "Vypuštění lampionů na festivalu Yee Peng",
+   "Privátní návštěva starobylých chrámů",
+   "Luxusní resort v džungli s bazénem",
+   "Thajské masáže a kulinářský workshop"
+  ],
+  "program": [
+   {
+    "den": "Den 01",
+    "nazev": "Bangkok & Welcome",
+    "text": "Přílet, ubytování v designovém hotelu a večerní street food tour."
+   },
+   {
+    "den": "Den 02",
+    "nazev": "Transfer do Chiang Mai",
+    "text": "Přesun na sever, ubytování v jungle resortu a uvítací večeře."
+   },
+   {
+    "den": "Den 03",
+    "nazev": "Doi Suthep & Chrámy",
+    "text": "Privátní prohlídka horského chrámu Doi Suthep nad městem."
+   },
+   {
+    "den": "Den 04",
+    "nazev": "Yee Peng — hlavní večer",
+    "text": "Ceremoniál a vypuštění tisíců lampionů k noční obloze."
+   },
+   {
+    "den": "Den 05",
+    "nazev": "Slony & Etická sanctuary",
+    "text": "Den v etické sloní rezervaci a večerní thajská masáž."
+   },
+   {
+    "den": "Den 06",
+    "nazev": "Kulinářský workshop",
+    "text": "Vaření s lokálním chef a night bazaar v Chiang Mai."
+   },
+   {
+    "den": "Den 07",
+    "nazev": "Volný den & Wellness",
+    "text": "Spa den v resortu nebo výlet do horských vesnic."
+   },
+   {
+    "den": "Den 08",
+    "nazev": "Farewell & Odlet",
+    "text": "Brunch a transfer na letiště přes Bangkok."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/thajsko-yee-peng.webp",
+   "w": 1280,
+   "h": 1600,
+   "alt": "Thajsko: Lampionový festival Chiang Mai"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "australie-zraloci",
+  "skryta": false,
+  "nazev": "Austrálie: Potápění v kleci se žraloky",
+  "lokace": "Port Lincoln, Jižní Austrálie",
+  "trasa": "Adelaide · Port Lincoln · Neptune Islands · Kangaroo Island · Great Ocean Road · Melbourne",
+  "od": "2026-11-09",
+  "do": "2026-11-20",
+  "termin_text": "",
+  "kategorie": "dobrodruzstvi",
+  "typ": "Extrémní potápění",
+  "stitek": "",
+  "skupina": "6 osob",
+  "kapacita": 6,
+  "volna_mista": 2,
+  "cena": "165 000 Kč",
+  "cena_pozn": "pozemní program / osoba",
+  "narocnost": 3,
+  "komfort": 3,
+  "perex": "Setkání tváří v tvář s bílým žralokem z bezpečí ocelové klece u Neptune Islands. Kombinace adrenalinu, plavby lodí a australského outbacku s večerním BBQ pod jižními hvězdami.",
+  "zazitky": [
+   "Cage diving s velkými bílými žraloky",
+   "Plavba k Neptune Islands",
+   "Great Ocean Road roadtrip",
+   "Wildlife na Kangaroo Island"
+  ],
+  "program": [
+   {
+    "den": "Den 01–02",
+    "nazev": "Adelaide & Welcome",
+    "text": "Přílet, aklimatizace a Barossa Valley vinařství."
+   },
+   {
+    "den": "Den 03",
+    "nazev": "Port Lincoln",
+    "text": "Přesun, brief a nalodění na expediční loď."
+   },
+   {
+    "den": "Den 04–05",
+    "nazev": "Neptune Islands · cage dive",
+    "text": "Dva dny cage divingu s velkými bílými žraloky."
+   },
+   {
+    "den": "Den 06",
+    "nazev": "Kangaroo Island",
+    "text": "Divoká fauna, klokani, koaly a večerní BBQ."
+   },
+   {
+    "den": "Den 07–09",
+    "nazev": "Great Ocean Road",
+    "text": "Roadtrip podél pobřeží, 12 apoštolů a surf spoty."
+   },
+   {
+    "den": "Den 10",
+    "nazev": "Melbourne",
+    "text": "Lifestyle metropole, art street a rooftop networking."
+   },
+   {
+    "den": "Den 11–12",
+    "nazev": "Farewell & Odlet",
+    "text": "Volný den a transfery."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/australie-zraloci.webp",
+   "w": 1280,
+   "h": 1600,
+   "alt": "Austrálie: Potápění v kleci se žraloky"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "antarktida",
+  "skryta": false,
+  "nazev": "Antarktida: Expedice na konec světa za tučňáky",
+  "lokace": "Antarktida",
+  "trasa": "Ushuaia · Drakeův průliv · Antarktický poloostrov · polární kruh",
+  "od": "2027-01-01",
+  "do": "2027-01-31",
+  "termin_text": "leden 2027",
+  "kategorie": "extremni",
+  "typ": "Exkluzivní expedice",
+  "stitek": "Exkluzivní",
+  "skupina": "8 osob",
+  "kapacita": 8,
+  "volna_mista": 1,
+  "cena": "Na vyžádání",
+  "cena_pozn": "",
+  "narocnost": 3,
+  "komfort": 4,
+  "perex": "Cesta pro ty, kteří už zažili všechno. Plavba expediční lodí mezi ledovými kryhami, pozorování velryb, ticho polární noci a tisícové kolonie tučňáků na dosah ruky.",
+  "zazitky": [
+   "Plavba luxusní expediční lodí přes Drakeův průliv",
+   "Pozorování velryb, tuleňů a kolonií tučňáků",
+   "Zodiac výpravy mezi ledovci",
+   "Vědecké přednášky polárních expertů na palubě"
+  ],
+  "program": [
+   {
+    "den": "Den 01–02",
+    "nazev": "Ushuaia & Nalodění",
+    "text": "Přílet na konec světa, prohlídka města a nalodění na expediční loď."
+   },
+   {
+    "den": "Den 03–04",
+    "nazev": "Drakeův průliv",
+    "text": "Plavba slavným průlivem, přednášky polárních expertů."
+   },
+   {
+    "den": "Den 05–08",
+    "nazev": "Antarktický poloostrov",
+    "text": "Zodiac výpravy, kolonie tučňáků, ledovce a velrybí pozorování."
+   },
+   {
+    "den": "Den 09–10",
+    "nazev": "Polární kruh",
+    "text": "Plavba k polárnímu kruhu a pozorování ticha věčného ledu."
+   },
+   {
+    "den": "Den 11–12",
+    "nazev": "Návrat & Ushuaia",
+    "text": "Cesta zpět, závěrečný gala dinner a rozloučení s expedicí."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/antarktida.webp",
+   "w": 1080,
+   "h": 1920,
+   "alt": "Antarktida: Expedice na konec světa za tučňáky"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "mexiko-yucatan",
+  "skryta": false,
+  "nazev": "Mexiko: Tajemný Yucatán & mayské podsvětí",
+  "lokace": "Yucatán · Tulum",
+  "trasa": "Cancún · Tulum · cenoty · Chichén Itzá · Isla Holbox · Coba",
+  "od": "2027-01-16",
+  "do": "2027-01-24",
+  "termin_text": "",
+  "kategorie": "dobrodruzstvi",
+  "typ": "Dobrodružný lifestyle",
+  "stitek": "",
+  "skupina": "8–10 osob",
+  "kapacita": 10,
+  "volna_mista": 5,
+  "cena": "94 000 Kč",
+  "cena_pozn": "pozemní program / osoba",
+  "narocnost": 2,
+  "komfort": 4,
+  "perex": "Potápění v mystických cenotech, výstup na mayské pyramidy při východu slunce a beach club vibe v Tulumu. Kombinace pralesa, karibských pláží a mayské magie.",
+  "zazitky": [
+   "Šnorchlování v posvátných cenotech",
+   "Chichén Itzá při východu slunce",
+   "Beach club a networking v Tulumu",
+   "Setkání s mayskou komunitou"
+  ],
+  "program": [
+   {
+    "den": "Den 01",
+    "nazev": "Cancún & Welcome",
+    "text": "Přílet, transfer do Tulumu a welcome dinner."
+   },
+   {
+    "den": "Den 02",
+    "nazev": "Cenoty",
+    "text": "Šnorchlování a freediving v třech cenotech."
+   },
+   {
+    "den": "Den 03",
+    "nazev": "Chichén Itzá",
+    "text": "Ranní privátní vstup před davy."
+   },
+   {
+    "den": "Den 04",
+    "nazev": "Tulum & Beach club",
+    "text": "Ruiny nad mořem a odpolední beach club."
+   },
+   {
+    "den": "Den 05",
+    "nazev": "Mayská komunita",
+    "text": "Návštěva vesnice a tradiční kuchyně."
+   },
+   {
+    "den": "Den 06",
+    "nazev": "Isla Holbox",
+    "text": "Plavba na tichý ostrov, západ slunce na paddleboardu."
+   },
+   {
+    "den": "Den 07",
+    "nazev": "Coba & Free day",
+    "text": "Výstup na pyramidu Coba nebo spa den."
+   },
+   {
+    "den": "Den 08",
+    "nazev": "Farewell & Odlet",
+    "text": "Poslední tacos a transfery."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/mexiko-yucatan.webp",
+   "w": 1280,
+   "h": 1600,
+   "alt": "Mexiko: Tajemný Yucatán & mayské podsvětí"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "laponsko",
+  "skryta": false,
+  "nazev": "Laponsko: Psí spřežení & Polární záře",
+  "lokace": "Finsko · za polárním kruhem",
+  "trasa": "Rovaniemi · husky farma · tajga · glass igloo · sobí farma",
+  "od": "2027-01-20",
+  "do": "2027-01-26",
+  "termin_text": "",
+  "kategorie": "dobrodruzstvi",
+  "typ": "Arktická expedice",
+  "stitek": "",
+  "skupina": "8 osob",
+  "kapacita": 8,
+  "volna_mista": 4,
+  "cena": "76 000 Kč",
+  "cena_pozn": "pozemní program / osoba",
+  "narocnost": 3,
+  "komfort": 3,
+  "perex": "Řízení vlastního psího spřežení čistou arktickou přírodou za polárním kruhem. Tradiční finská sauna, otužování v zamrzlém jezeře a noční stopování polární záře.",
+  "zazitky": [
+   "Vlastní psí spřežení v arktické divočině",
+   "Tradiční finská sauna & otužování",
+   "Stopování polární záře v noci",
+   "Nocleh v glass igloo s výhledem na nebe"
+  ],
+  "program": [
+   {
+    "den": "Den 01",
+    "nazev": "Rovaniemi & Welcome",
+    "text": "Přílet, vyzvednutí termo výbavy a welcome dinner."
+   },
+   {
+    "den": "Den 02",
+    "nazev": "Husky farma & Brief",
+    "text": "Seznámení se psy, výcvik a první kratší jízda."
+   },
+   {
+    "den": "Den 03",
+    "nazev": "Tajga expedice",
+    "text": "Celodenní jízda spřežením tajgou, oběd u ohně a nocleh v cabin."
+   },
+   {
+    "den": "Den 04",
+    "nazev": "Sauna & Otužování",
+    "text": "Tradiční finská sauna a koupel v ledové díře v jezeře."
+   },
+   {
+    "den": "Den 05",
+    "nazev": "Aurora hunting",
+    "text": "Nocleh v glass igloo, noční stopování polární záře."
+   },
+   {
+    "den": "Den 06",
+    "nazev": "Sněžné skútry & Sob farma",
+    "text": "Adrenalinová jízda na skútrech a setkání se sobí farmou."
+   },
+   {
+    "den": "Den 07",
+    "nazev": "Farewell & Odlet",
+    "text": "Brunch v Rovaniemi a transfery."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/laponsko.webp",
+   "w": 1280,
+   "h": 1600,
+   "alt": "Laponsko: Psí spřežení & Polární záře"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "rio-de-janeiro",
+  "skryta": false,
+  "nazev": "Brazílie: Divoké Rio de Janeiro",
+  "lokace": "Rio de Janeiro",
+  "trasa": "Ipanema · Cristo Redentor · Sambadrome · Pedra Bonita · Santa Marta",
+  "od": "2027-02-05",
+  "do": "2027-02-12",
+  "termin_text": "",
+  "kategorie": "extremni",
+  "typ": "Metropolitní expedice",
+  "stitek": "",
+  "skupina": "8 osob",
+  "kapacita": 8,
+  "volna_mista": 4,
+  "cena": "112 000 Kč",
+  "cena_pozn": "pozemní program / osoba",
+  "narocnost": 2,
+  "komfort": 4,
+  "perex": "Karneval, samba, favely s lokálním průvodcem a hang gliding z Pedra Bonita. Rio v maximální intenzitě — pláže, panorama Cristo Redentor a beach club vibe.",
+  "zazitky": [
+   "Karneval Sambadrome",
+   "Hang gliding z Pedra Bonita",
+   "Safe favela tour s lokálem",
+   "Cristo Redentor a Sugarloaf"
+  ],
+  "program": [
+   {
+    "den": "Den 01",
+    "nazev": "Rio & Welcome",
+    "text": "Přílet, ubytování v Ipanemě a caipirinha na pláži."
+   },
+   {
+    "den": "Den 02",
+    "nazev": "Cristo & Sugarloaf",
+    "text": "Ikonické panorama města z obou vrcholů."
+   },
+   {
+    "den": "Den 03",
+    "nazev": "Karneval Sambadrome",
+    "text": "VIP box v Sambadromu na hlavní karnevalový večer."
+   },
+   {
+    "den": "Den 04",
+    "nazev": "Hang gliding",
+    "text": "Adrenalinový let z Pedra Bonita nad São Conrado."
+   },
+   {
+    "den": "Den 05",
+    "nazev": "Favela tour",
+    "text": "Bezpečná prohlídka Santa Marta s lokálním průvodcem."
+   },
+   {
+    "den": "Den 06",
+    "nazev": "Beach & Networking",
+    "text": "Ipanema, Copacabana a večerní rooftop mastermind."
+   },
+   {
+    "den": "Den 07",
+    "nazev": "Free day",
+    "text": "Surf, futbal na pláži nebo Jardim Botânico."
+   },
+   {
+    "den": "Den 08",
+    "nazev": "Farewell & Odlet",
+    "text": "Brunch a transfer na letiště."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/rio-de-janeiro.webp",
+   "w": 1280,
+   "h": 1600,
+   "alt": "Brazílie: Divoké Rio de Janeiro"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "lofoty",
+  "skryta": false,
+  "nazev": "Norsko: Zimní Lofoty & polární záře",
+  "lokace": "Lofoty, sever Norska",
+  "trasa": "Bodø · Reine · Hamnøy · fjordy Lofot",
+  "od": "2027-02-10",
+  "do": "2027-02-17",
+  "termin_text": "",
+  "kategorie": "dobrodruzstvi",
+  "typ": "Severská expedice",
+  "stitek": "",
+  "skupina": "8 osob",
+  "kapacita": 8,
+  "volna_mista": 3,
+  "cena": "84 000 Kč",
+  "cena_pozn": "pozemní program / osoba",
+  "narocnost": 3,
+  "komfort": 3,
+  "perex": "Dramatické zasněžené štíty padající do fjordů, rybářské vesničky s rudými rorbu chatkami a nekonečné noční nebe s polární září. Skitouring, focení a totální reset v arktickém tichu.",
+  "zazitky": [
+   "Ubytování v tradičním rorbu na fjordu",
+   "Skitouring nad zamrzlými fjordy",
+   "Noční focení polární záře",
+   "Sauna a otužování v arktickém moři"
+  ],
+  "program": [
+   {
+    "den": "Den 01",
+    "nazev": "Bodø & transfer",
+    "text": "Přílet a lodní přejezd na Lofoty."
+   },
+   {
+    "den": "Den 02",
+    "nazev": "Reine & Hamnøy",
+    "text": "Ubytování v rorbu a fotografická procházka."
+   },
+   {
+    "den": "Den 03",
+    "nazev": "Skitouring",
+    "text": "Aklimatizační výstup nad zamrzlým fjordem."
+   },
+   {
+    "den": "Den 04",
+    "nazev": "Aurora & Sauna",
+    "text": "Sauna, otužování a noční lov polární záře."
+   },
+   {
+    "den": "Den 05",
+    "nazev": "Orca safari",
+    "text": "Plavba za velrybami a kosatkami."
+   },
+   {
+    "den": "Den 06",
+    "nazev": "Free day & Vikinské muzeum",
+    "text": "Volný den nebo Lofotr vikinské muzeum."
+   },
+   {
+    "den": "Den 07",
+    "nazev": "Farewell & Odlet",
+    "text": "Brunch a transfer zpět přes Bodø."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/lofoty.webp",
+   "w": 1280,
+   "h": 1600,
+   "alt": "Norsko: Zimní Lofoty & polární záře"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "arktida",
+  "skryta": false,
+  "nazev": "Arktida: Plavba mezi ledovci",
+  "lokace": "Špicberky · Grónsko",
+  "trasa": "Longyearbyen · fjordy Špicberků · hranice pak ledu · ptačí kolonie",
+  "od": "2027-08-01",
+  "do": "2027-08-31",
+  "termin_text": "srpen 2027",
+  "kategorie": "extremni",
+  "typ": "Extrémní polární výprava",
+  "stitek": "Exkluzivní",
+  "skupina": "6–8 osob",
+  "kapacita": 8,
+  "volna_mista": 2,
+  "cena": "Na vyžádání",
+  "cena_pozn": "",
+  "narocnost": 3,
+  "komfort": 4,
+  "perex": "Plavba expediční lodí mezi ledovými katedrálami arktických moří. Ledními medvědy počínaje, plavbou v ledové pěně mezi tisíciletými krami konče. Ticho, které se nikde jinde nedá zažít.",
+  "zazitky": [
+   "Ledovcové katedrály Špicberků",
+   "Pozorování ledních medvědů a mrožů",
+   "Zodiac výpravy mezi krami",
+   "Přednášky polárních vědců na palubě"
+  ],
+  "program": [
+   {
+    "den": "Den 01–02",
+    "nazev": "Longyearbyen & Nalodění",
+    "text": "Přílet na Špicberky a nalodění na expediční loď."
+   },
+   {
+    "den": "Den 03–05",
+    "nazev": "Ledovcové fjordy",
+    "text": "Plavba do fjordů, zodiac výpravy a první polární medvědi."
+   },
+   {
+    "den": "Den 06–08",
+    "nazev": "Pack ice",
+    "text": "Plavba na hranici pak ledu, pozorování medvědů a mrožů."
+   },
+   {
+    "den": "Den 09–10",
+    "nazev": "Ptačí kolonie & Ledovce",
+    "text": "Návštěvy hnízdišť a kolosálních ledovcových stěn."
+   },
+   {
+    "den": "Den 11–12",
+    "nazev": "Návrat & Farewell",
+    "text": "Poslední zodiac, farewell gala a odlet."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/arktida.webp",
+   "w": 1280,
+   "h": 1600,
+   "alt": "Arktida: Plavba mezi ledovci"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "madeira",
+  "skryta": false,
+  "nazev": "Madeira: Surf, Treky & Funchal",
+  "lokace": "Portugalsko",
+  "trasa": "Funchal · Praia do Porto · Pico Ruivo · Monte · levady",
+  "od": "2026-04-12",
+  "do": "2026-04-19",
+  "termin_text": "",
+  "kategorie": "lifestyle",
+  "typ": "Lifestylová expedice",
+  "stitek": "Speciální host",
+  "skupina": "8–10 osob",
+  "kapacita": 10,
+  "volna_mista": 4,
+  "cena": "42 900 Kč",
+  "cena_pozn": "pozemní program / osoba",
+  "narocnost": 2,
+  "komfort": 4,
+  "perex": "Týden plný kontrastů. Ráno surfování na Atlantiku, odpoledne trek nad mraky na Pico Ruivo a legendární sjezd na proutěných saních v uličkách Funchalu.",
+  "zazitky": [
+   "Privátní vila s výhledem na oceán nad Funchalem",
+   "Surf lekce s lokálním instruktorem",
+   "Trek na Pico Ruivo nad mraky",
+   "Degustace madeirských vín a večerní networking"
+  ],
+  "program": [
+   {
+    "den": "Den 01",
+    "nazev": "Přílet & Welcome dinner",
+    "text": "Transfer z letiště, ubytování ve vile a slavnostní zahájení s úvodním briefem."
+   },
+   {
+    "den": "Den 02",
+    "nazev": "Surf & Pico Ruivo",
+    "text": "Ranní surfing v Praia do Porto, odpoledne trek nad mraky."
+   },
+   {
+    "den": "Den 03",
+    "nazev": "Boby z Monte & Vinný sklep",
+    "text": "Tradiční jízda proutěnými saněmi a degustace na rodinné vinici."
+   },
+   {
+    "den": "Den 04",
+    "nazev": "Levady & Vodopády",
+    "text": "Celodenní treking po levadách s piknikem v laurisilvě."
+   },
+   {
+    "den": "Den 05",
+    "nazev": "Free day & Networking",
+    "text": "Volný den, masáže, paddleboard nebo coworking ve vile."
+   },
+   {
+    "den": "Den 06",
+    "nazev": "Funchal & Farewell",
+    "text": "Procházka starým městem, street art a slavnostní rozlučková večeře."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/madeira.webp",
+   "w": 1280,
+   "h": 1600,
+   "alt": "Madeira: Surf, Treky & Funchal"
+  },
+  "galerie": [],
+  "v_cene": []
+ },
+ {
+  "slug": "monza-f1",
+  "skryta": false,
+  "nazev": "Monza F1: Grand Prix Experience",
+  "lokace": "Itálie",
+  "trasa": "jezero Como · Monza · Milán",
+  "od": "2026-09-04",
+  "do": "2026-09-08",
+  "termin_text": "",
+  "kategorie": "lifestyle",
+  "typ": "VIP Sportovní zážitek",
+  "stitek": "Speciální host",
+  "skupina": "6–8 osob",
+  "kapacita": 8,
+  "volna_mista": 2,
+  "cena": "67 800 Kč",
+  "cena_pozn": "pozemní program / osoba",
+  "narocnost": 1,
+  "komfort": 4,
+  "perex": "Formule 1 naživo a ve velkém stylu. Společná luxusní vila, večerní business networking, grilování a adrenalin přímo na okruhu.",
+  "zazitky": [
+   "Privátní vila u jezera Como",
+   "Vstupenky na všechny tři dny GP",
+   "Paddock club a setkání s týmy",
+   "Business networking a degustace"
+  ],
+  "program": [
+   {
+    "den": "Den 01",
+    "nazev": "Arrival & Como dinner",
+    "text": "Příjezd do vily u jezera Como, welcome dinner a brief od hosta."
+   },
+   {
+    "den": "Den 02",
+    "nazev": "Free practice & Networking",
+    "text": "Páteční jízdy v Monze a večerní business networking."
+   },
+   {
+    "den": "Den 03",
+    "nazev": "Kvalifikace & Milán",
+    "text": "Kvalifikace v paddocku, večer kulinářský zážitek v Miláně."
+   },
+   {
+    "den": "Den 04",
+    "nazev": "Race day",
+    "text": "Samotný závod Grand Prix v premium zóně a oslava výsledků."
+   },
+   {
+    "den": "Den 05",
+    "nazev": "Como & Departure",
+    "text": "Lehké dopoledne u jezera, brunch a transfery."
+   }
+  ],
+  "foto": {
+   "src": "img/expedice/monza-f1.webp",
+   "w": 1280,
+   "h": 1600,
+   "alt": "Monza F1: Grand Prix Experience"
+  },
+  "galerie": [],
+  "v_cene": []
+ }
+]

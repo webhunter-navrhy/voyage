@@ -1,0 +1,32 @@
+{% extends "_base.html" %}
+{% from "_makra.html" import formular %}
+{% block body_class %}podstranka{% endblock %}
+{% block obsah %}
+{% set S = T.privatni %}
+<section class="pod-hero">
+  <div class="wrap pod-grid">
+    <div>
+      <p class="nadtitulek">{{ T.spoluprace.privatni_h }}</p>
+      <h1>{{ S.h1|nb }}</h1>
+      <div class="pod-text">{{ S.text|odstavce }}</div>
+      <a href="#prihlaska" class="btn">Poptat cestu na míru</a>
+    </div>
+    <div class="pod-foto">{{ img('img/expedice/monza-f1.webp', '', sizes='(min-width: 900px) 40vw, 92vw', eager=True) }}</div>
+  </div>
+</section>
+<section class="sekce pod-body">
+  <ol class="wrap trojice" role="list">
+    {% for b in S.body %}<li><h2>{{ b.nadpis|nb }}</h2><p>{{ b.text|nb }}</p></li>{% endfor %}
+  </ol>
+</section>
+<section class="sekce prihlaska" id="prihlaska">
+  <div class="wrap prihlaska-grid">
+    <header>
+      <p class="nadtitulek">Napiš nám</p>
+      <h2>Poptat cestu na míru</h2>
+      <p class="sekce-text">Napiš pár vět o tom, co máš v hlavě – kam, kdy a pro koho. Ozveme se ti s návrhem.</p>
+    </header>
+    {{ formular(None) }}
+  </div>
+</section>
+{% endblock %}

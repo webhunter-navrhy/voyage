@@ -1,0 +1,48 @@
+{# Sdílené kousky: karta expedice, ukazatel bodů, formulář přihlášky #}
+
+{% macro body5(n, popis) %}<span class="body5" role="img" aria-label="{{ popis }} {{ n }} z 5">{% for i in range(5) %}<i{% if i < n %} class="on"{% endif %}></i>{% endfor %}</span>{% endmacro %}
+
+{% macro karta(e, sizes='(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 92vw') %}
+<article class="karta" data-karta data-kat="{{ e.kategorie }}" data-od="{{ e.od }}" data-do="{{ e.do }}">
+  <a href="{{ url('expedice/' ~ e.slug) }}" class="karta-odkaz">
+    <div class="karta-foto">
+      {{ img(e.foto, e.foto.alt or e.nazev, sizes=sizes) }}
+      <span class="karta-termin">{{ e|termin_kratce }}</span>
+      {% if e.stitek %}<span class="karta-stitek">{{ e.stitek }}</span>{% endif %}
+    </div>
+    <div class="karta-text">
+      <p class="karta-meta">{{ e.lokace }}</p>
+      <h3>{{ e.nazev|nb }}</h3>
+      <p class="karta-perex">{{ e.perex|nb }}</p>
+      <div class="karta-pata">
+        <span class="karta-cena">{{ e.cena|nb }}</span>
+        <span class="karta-mista{% if e.volna_mista|int <= 2 %} malo{% endif %}">{{ e.volna_mista|mista }}</span>
+      </div>
+    </div>
+  </a>
+</article>
+{% endmacro %}
+
+{% macro formular(vybrana=None, id='prihlaska-form') %}
+<form class="formular" id="{{ id }}" data-formular data-endpoint="{{ site.formular.endpoint }}" data-demo="{{ 1 if site.formular.demo else 0 }}" novalidate>
+  <label class="pole pole-cele">
+    <span>Expedice</span>
+    <select name="Expedice" data-vyber-expedice>
+      {% for x in budouci %}<option value="{{ x.slug }}" data-nazev="{{ x.nazev }}" data-kratce="{{ x.nazev.split(':')[0] }} · {{ x|termin_kratce }}" data-do="{{ x.do }}" data-url="{{ url_webu }}expedice/{{ x.slug }}/"{% if vybrana and vybrana.slug == x.slug %} selected{% endif %}>{{ x.nazev }} · {{ x|termin_kratce }}{% if x.volna_mista|int <= 0 %} (náhradník){% endif %}</option>{% endfor %}
+      {% if vybrana and vybrana.probehla %}<option value="{{ vybrana.slug }}" data-nazev="{{ vybrana.nazev }}" selected>{{ vybrana.nazev }} (další termín)</option>{% endif %}
+      <option value="">Jiný dotaz / privátní cesta</option>
+    </select>
+  </label>
+  <label class="pole"><span>Jméno a příjmení</span><input name="Jméno" autocomplete="name" required></label>
+  <label class="pole"><span>E-mail</span><input name="E-mail" type="email" autocomplete="email" required></label>
+  <label class="pole"><span>Telefon</span><input name="Telefon" type="tel" autocomplete="tel" inputmode="tel"></label>
+  <label class="pole"><span>Počet osob</span><input name="Počet osob" type="number" min="1" max="20" value="1" inputmode="numeric"></label>
+  <label class="pole pole-cele"><span>Zpráva <small>(nepovinné)</small></span><textarea name="Zpráva" rows="4" placeholder="Na co se chceš zeptat? Jedeš sám, nebo s partou?"></textarea></label>
+  <div class="past" aria-hidden="true"><label>Nevyplňovat <input name="_hp" tabindex="-1" autocomplete="off"></label></div>
+  <label class="souhlas pole-cele"><input type="checkbox" name="souhlas" required> <span>Souhlasím se zpracováním kontaktních údajů za účelem vyřízení přihlášky.</span></label>
+  <div class="formular-pata pole-cele">
+    <button type="submit" class="btn">Odeslat přihlášku</button>
+    <p class="formular-stav" role="status" aria-live="polite"></p>
+  </div>
+</form>
+{% endmacro %}

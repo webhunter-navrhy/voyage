@@ -1,0 +1,19 @@
+{
+  "slug": "voyage",
+  "nazev": "VOYAGE",
+  "podtitul": "Expediční cesty v malých skupinách",
+  "url": "https://webhunter-navrhy.github.io/voyage/",
+  "base": "/voyage/",
+  "lang": "cs",
+  "popis": "VOYAGE – expediční výpravy v malých skupinách s propracovaným programem. Termíny expedic, itineráře den po dni, ceny a přihláška online.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "img/uvod/prales.webp",
+  "theme_color": "#f4efe6",
+  "provozovatel": "",
+  "ico": "",
+  "email": "info@bartlreality.cz",
+  "instagram": "https://www.instagram.com/voyage_traveler/",
+  "instagram_jmeno": "@voyage_traveler",
+  "formular": {"endpoint": "https://webhunter-admin.webhunter.workers.dev/api/voyage/form", "demo": false}
+}

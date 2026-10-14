@@ -1,0 +1,220 @@
+{% extends "_base.html" %}
+{% from "_makra.html" import karta, formular, body5 %}
+{% block body_class %}uvod{% endblock %}
+{% block head %}
+<script type="application/ld+json">{{ ld(org_ld) }}</script>
+{% set ld_items = [] %}
+{% for e in budouci %}{% set _ = ld_items.append({"@type": "ListItem", "position": loop.index, "url": url_webu ~ "expedice/" ~ e.slug ~ "/", "name": e.nazev}) %}{% endfor %}
+{% set ld_faq = [] %}
+{% for f in faq %}{% set _ = ld_faq.append({"@type": "Question", "name": f.otazka, "acceptedAnswer": {"@type": "Answer", "text": f.odpoved}}) %}{% endfor %}
+<script type="application/ld+json">{{ ld({"@context": "https://schema.org", "@type": "ItemList", "name": "Nadcházející expedice VOYAGE", "itemListElement": ld_items}) }}</script>
+<script type="application/ld+json">{{ ld({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": ld_faq}) }}</script>
+{% endblock %}
+{% block obsah %}
+{% set U = T.uvod %}
+{% set prvni = budouci[0] if budouci else None %}
+<section class="hero">
+  <div class="hero-foto">{{ img('img/uvod/prales.webp', 'Mlžný prales za svítání', sizes='100vw', eager=True) }}</div>
+  <div class="hero-in wrap">
+    <p class="nadtitulek nadtitulek-svetly">{{ U.nadtitulek }}</p>
+    <h1><span>{{ U.h1_1|nb }}</span> <span class="hero-zlata">{{ U.h1_2|nb }}</span></h1>
+    <p class="hero-perex">{{ U.perex|nb }}</p>
+    <div class="hero-akce">
+      <a href="#expedice" class="btn btn-svetle">{{ U.tlacitko }}</a>
+      <a href="#kalendar" class="odkaz-svetly">{{ U.tlacitko2 }}</a>
+    </div>
+  </div>
+  {% if prvni %}
+  <a class="odjezd" href="{{ url('expedice/' ~ prvni.slug) }}" data-odjezd>
+    <span class="odjezd-in wrap">
+      <span class="odjezd-stitek">Nejbližší odjezd</span>
+      <span class="odjezd-nazev" data-o="nazev">{{ prvni.nazev|nb }}</span>
+      <span class="odjezd-termin" data-o="termin">{{ prvni|termin }}</span>
+      <span class="odjezd-mista" data-o="mista">{{ prvni.volna_mista|mista }}</span>
+      <span class="odjezd-sipka" aria-hidden="true">→</span>
+    </span>
+  </a>
+  {% endif %}
+</section>
+
+<section class="sekce kalendar" id="kalendar" aria-labelledby="kalendar-h">
+  <div class="wrap">
+    <header class="sekce-hlava">
+      <p class="nadtitulek">{{ T.kalendar.nadtitulek }}</p>
+      <h2 id="kalendar-h">{{ T.kalendar.h2|nb }}</h2>
+      <p class="sekce-text">{{ T.kalendar.text|nb }}</p>
+    </header>
+    <div class="kalendar-grid">
+      <div class="kompas-roku" data-kompas aria-label="Roční kalendář expedic">
+        <svg viewBox="-300 -300 600 600" role="group" aria-label="Expedice na příštích 12 měsíců" data-kompas-svg></svg>
+        <noscript><p>Seznam expedic najdete níže.</p></noscript>
+      </div>
+      {% if prvni %}
+      <article class="vyprava" data-vyprava aria-live="polite">
+        <a href="{{ url('expedice/' ~ prvni.slug) }}" class="vyprava-foto" data-v="odkaz" tabindex="-1" aria-hidden="true">
+          <img src="{{ img_url(prvni.foto.src, True) }}" alt="" width="640" height="800" loading="lazy" data-v="foto">
+        </a>
+        <div class="vyprava-text">
+          <p class="vyprava-kat"><span data-v="kat">{{ kat[prvni.kategorie] }}</span> · <span data-v="lokace">{{ prvni.lokace }}</span></p>
+          <h3 data-v="nazev">{{ prvni.nazev|nb }}</h3>
+          <dl class="vyprava-fakta">
+            <div><dt>Termín</dt><dd data-v="termin">{{ prvni|termin }}</dd></div>
+            <div><dt>Trasa</dt><dd data-v="trasa">{{ prvni.trasa|nb }}</dd></div>
+            <div><dt>Skupina</dt><dd data-v="skupina">{{ prvni.skupina }}</dd></div>
+            <div><dt>Volná místa</dt><dd data-v="mista">{{ prvni.volna_mista|mista }}</dd></div>
+            <div><dt>Cena</dt><dd data-v="cena">{{ prvni.cena|nb }}</dd></div>
+          </dl>
+          <a href="{{ url('expedice/' ~ prvni.slug) }}" class="btn" data-v="odkaz2">Detail a přihláška</a>
+        </div>
+      </article>
+      {% endif %}
+    </div>
+  </div>
+  <script type="application/json" data-expedice-json>{% set kd = [] %}{% for e in vsechny %}{% set _ = kd.append({"slug": e.slug, "nazev": e.nazev, "od": e.od, "do": e.do, "termin": e|termin, "lokace": e.lokace, "trasa": e.trasa, "skupina": e.skupina, "mista": e.volna_mista|mista, "volna": e.volna_mista|int, "cena": e.cena, "kat": kat.get(e.kategorie, ''), "foto": img_url(e.foto.src, True), "url": url('expedice/' ~ e.slug)}) %}{% endfor %}{{ ld(kd) }}</script>
+</section>
+
+<section class="sekce expedice" id="expedice" aria-labelledby="expedice-h">
+  <div class="wrap">
+    <header class="sekce-hlava sekce-hlava-radek">
+      <div>
+        <p class="nadtitulek">{{ T.expedice.nadtitulek }}</p>
+        <h2 id="expedice-h">{{ T.expedice.h2|nb }}</h2>
+      </div>
+      <p class="sekce-text">{{ T.expedice.text|nb }}</p>
+    </header>
+    <div class="filtr" role="group" aria-label="Filtrovat expedice">
+      <button type="button" class="filtr-btn" aria-pressed="true" data-filtr="">Všechny cesty</button>
+      {% for k in T.kategorie %}<button type="button" class="filtr-btn" aria-pressed="false" data-filtr="{{ k.id }}">{{ k.nazev }}</button>{% endfor %}
+    </div>
+    <div class="karty" data-karty>
+      {% for e in budouci %}{{ karta(e) }}{% endfor %}
+    </div>
+    <p class="karty-prazdno" data-prazdno hidden>V této kategorii teď žádný termín není. <button type="button" class="odkaz" data-filtr="">Zobrazit všechny cesty</button></p>
+    {% if probehle %}
+    <details class="archiv" data-archiv>
+      <summary>{{ T.expedice.archiv }} <span data-archiv-pocet>({{ probehle|length }})</span></summary>
+      <ul class="archiv-seznam" role="list" data-archiv-seznam>
+        {% for e in probehle %}<li data-karta data-od="{{ e.od }}" data-do="{{ e.do }}" data-kat="{{ e.kategorie }}"><a href="{{ url('expedice/' ~ e.slug) }}"><span class="archiv-termin">{{ e|termin_kratce }}</span><span class="archiv-nazev">{{ e.nazev|nb }}</span><span class="archiv-lokace">{{ e.lokace }}</span></a></li>{% endfor %}
+      </ul>
+    </details>
+    {% endif %}
+  </div>
+</section>
+
+<section class="sekce jak" id="jak" aria-labelledby="jak-h">
+  <div class="wrap jak-grid">
+    <div>
+      <p class="nadtitulek nadtitulek-svetly">{{ T.jak.nadtitulek }}</p>
+      <h2 id="jak-h">{{ T.jak.h2|nb }}</h2>
+      <p class="jak-text">{{ T.jak.text|nb }}</p>
+      <ul class="jak-body" role="list">
+        {% for b in T.jak.body %}<li>{{ b|nb }}</li>{% endfor %}
+      </ul>
+    </div>
+    <aside class="cena-box" aria-labelledby="cena-h">
+      <h3 id="cena-h">{{ T.cena.h3|nb }}</h3>
+      <p>{{ T.cena.text|nb }}</p>
+      <ul role="list" class="v-cene">
+        {% for b in T.cena.v_cene %}<li>{{ b|nb }}</li>{% endfor %}
+      </ul>
+      <div class="letenky">
+        <p class="letenky-h">{{ T.cena.letenky_h }}</p>
+        <p>{{ T.cena.letenky|nb }}</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="sekce pruvodci" id="pruvodci" aria-labelledby="pruvodci-h">
+  <div class="wrap">
+    <header class="sekce-hlava sekce-hlava-radek">
+      <div>
+        <p class="nadtitulek">{{ T.pruvodci.nadtitulek }}</p>
+        <h2 id="pruvodci-h">{{ T.pruvodci.h2|nb }}</h2>
+      </div>
+      <div class="pruvodci-ovladani">
+        <p class="sekce-text">{{ T.pruvodci.text|nb }}</p>
+        <div class="sipky"><button type="button" aria-label="Předchozí průvodci" data-posun="-1">←</button><button type="button" aria-label="Další průvodci" data-posun="1">→</button></div>
+      </div>
+    </header>
+  </div>
+  <ul class="pruvodci-pas" role="list" data-pas tabindex="0" aria-label="Průvodci VOYAGE">
+    {% for p in pruvodci %}
+    <li class="pruvodce">
+      <button type="button" class="pruvodce-btn" data-dialog="p-{{ p.id }}">
+        <span class="pruvodce-foto">{{ img(p.foto, p.jmeno, sizes='(min-width: 900px) 22vw, 70vw') }}</span>
+        <span class="pruvodce-role">{{ p.role }}</span>
+        <span class="pruvodce-jmeno">{{ p.jmeno }}</span>
+        <span class="pruvodce-kratce">{{ p.kratce|nb }}</span>
+        <span class="pruvodce-vic">Celý profil</span>
+      </button>
+      <dialog class="dialog" id="p-{{ p.id }}" aria-labelledby="p-{{ p.id }}-h">
+        <div class="dialog-in">
+          <div class="dialog-foto">{{ img(p.foto, '', sizes='(min-width: 900px) 360px, 80vw') }}</div>
+          <div>
+            <p class="pruvodce-role">{{ p.role }}</p>
+            <h3 id="p-{{ p.id }}-h">{{ p.jmeno }}</h3>
+            {{ p.bio|odstavce }}
+            {% if p.zamereni %}<p class="dialog-zamereni">{{ p.zamereni }}</p>{% endif %}
+          </div>
+          <button type="button" class="dialog-zavrit" data-zavrit aria-label="Zavřít">×</button>
+        </div>
+      </dialog>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="sekce spoluprace" aria-label="Spolupráce">
+  <div class="wrap spoluprace-grid">
+    <a href="{{ url('privatni-cesty') }}" class="panel">
+      <span class="panel-foto">{{ img('img/expedice/monza-f1.webp', '', sizes='(min-width: 900px) 45vw, 92vw') }}</span>
+      <span class="panel-text">
+        <span class="panel-h">{{ T.spoluprace.privatni_h }}</span>
+        <span class="panel-p">{{ T.spoluprace.privatni_text|nb }}</span>
+        <span class="panel-odkaz">Poptat cestu na míru →</span>
+      </span>
+    </a>
+    <a href="{{ url('pro-influencery') }}" class="panel">
+      <span class="panel-foto">{{ img('img/expedice/madeira.webp', '', sizes='(min-width: 900px) 45vw, 92vw') }}</span>
+      <span class="panel-text">
+        <span class="panel-h">{{ T.spoluprace.influenceri_h }}</span>
+        <span class="panel-p">{{ T.spoluprace.influenceri_text|nb }}</span>
+        <span class="panel-odkaz">Chci spolupracovat →</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<section class="sekce faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq-grid">
+    <header>
+      <p class="nadtitulek">{{ T.faq.nadtitulek }}</p>
+      <h2 id="faq-h">{{ T.faq.h2|nb }}</h2>
+    </header>
+    <div class="faq-seznam">
+      {% for f in faq %}
+      <details class="otazka"{% if loop.first %} open{% endif %}>
+        <summary>{{ f.otazka|nb }}</summary>
+        <div class="odpoved">{{ f.odpoved|odstavce }}</div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sekce prihlaska" id="prihlaska" aria-labelledby="prihlaska-h">
+  <div class="wrap prihlaska-grid">
+    <header>
+      <p class="nadtitulek">{{ T.kontakt.nadtitulek }}</p>
+      <h2 id="prihlaska-h">{{ T.kontakt.h2|nb }}</h2>
+      <p class="sekce-text">{{ T.kontakt.text|nb }}</p>
+      <ul class="kontakty" role="list">
+        {% if site.email %}<li><span>E-mail</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>{% endif %}
+        {% if site.instagram %}<li><span>Instagram</span><a href="{{ site.instagram }}" target="_blank" rel="noopener">{{ site.instagram_jmeno }}</a></li>{% endif %}
+      </ul>
+    </header>
+    {{ formular(prvni) }}
+  </div>
+</section>
+{% endblock %}

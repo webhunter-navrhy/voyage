@@ -1,0 +1,99 @@
+{
+  "uvod": {
+    "title": "VOYAGE – expedice v malých skupinách",
+    "description": "Expediční výpravy v malých skupinách s propracovaným programem. Termíny, itineráře den po dni, ceny a přihláška online.",
+    "nadtitulek": "Expediční výpravy",
+    "h1_1": "Zažij svět.",
+    "h1_2": "Tvoje expedice začíná zde.",
+    "perex": "Expediční výpravy v malých skupinách s propracovaným programem. Cestuj s lidmi na stejné vlně, objevuj skryté lokace a posouvej své limity.",
+    "tlacitko": "Vybrat expedici",
+    "tlacitko2": "Kalendář výprav"
+  },
+  "kalendar": {
+    "nadtitulek": "Kalendář výprav",
+    "h2": "Kam a kdy letos vyrážíme",
+    "text": "Každý oblouk na kompasu je jedna expedice v měsících, kdy probíhá. Vyber oblouk a uvidíš termín, trasu, volná místa i cenu."
+  },
+  "expedice": {
+    "nadtitulek": "Aktuální expedice",
+    "h2": "Vyber si svou další kapitolu",
+    "text": "Pečlivě sestavené výpravy v limitované skupině. Žádné davy, žádné kompromisy.",
+    "archiv": "Proběhlé expedice"
+  },
+  "kategorie": [
+    {"id": "lifestyle", "nazev": "Lifestyle & jachting"},
+    {"id": "dobrodruzstvi", "nazev": "Dobrodružství & divočina"},
+    {"id": "extremni", "nazev": "Extrémní výpravy & metropole"}
+  ],
+  "jak": {
+    "nadtitulek": "Jak cestujeme",
+    "h2": "Skupina, co nečeká na zítřek",
+    "text": "VOYAGE nevzniklo v kanceláři cestovky, ale na cestách. Jsme skupina lidí, kteří milují svobodu, adrenalin a autentické zážitky. My plánujeme logistiku a jedinečný program – ty si užíváš moment, který ti změní pohled na svět.",
+    "body": ["Autentické zážitky, ne checklisty", "Malé skupiny 8–14 lidí", "Prémiové ubytování s charakterem", "Lidé na stejné vlně"]
+  },
+  "cena": {
+    "h3": "Žádné překvapení. Jen jasná čísla.",
+    "text": "Cena zahrnuje kompletní pozemní program a prémiové zázemí na místě.",
+    "v_cene": ["Ubytování v privátní vile / stylové lodge", "Kompletní program a aktivity", "Lokální doprava na místě", "Osobní průvodce a host týdne"],
+    "letenky_h": "A letenky?",
+    "letenky": "Letenky si řeší každý účastník sám – s výběrem nejvhodnějšího letu ti osobně pomůžeme."
+  },
+  "pruvodci": {
+    "nadtitulek": "Naši průvodci a lídři",
+    "h2": "Lidé, kteří tě opravdu provedou",
+    "text": "Žádní bezejmenní delegáti. Tým, který zná každou lokaci osobně a do detailu."
+  },
+  "spoluprace": {
+    "privatni_h": "Privátní cesty",
+    "privatni_text": "Expedice na míru pro tvou partu nebo firmu. Navrhneme program na klíč, pronajmeme vilu a postaráme se o hladký průběh na místě.",
+    "influenceri_h": "Pro influencery",
+    "influenceri_text": "Máš silnou komunitu? Vytvořme společně tvůj vlastní zájezd. Ty dodáš energii a lidi, VOYAGE zastřeší organizaci, ubytování i program."
+  },
+  "faq": {
+    "nadtitulek": "Časté otázky",
+    "h2": "Než se zeptáš, zeptali jsme se za tebe"
+  },
+  "kontakt": {
+    "nadtitulek": "Přihláška",
+    "h2": "Chceš jet s námi?",
+    "text": "Vyber expedici a nech nám na sebe kontakt. Ozveme se ti s podrobnostmi, volnými místy a dalším postupem. Přihláška je nezávazná."
+  },
+  "detail": {
+    "den_po_dni": "Den po dni",
+    "zazitky": "Co zažiješ",
+    "galerie": "Fotogalerie",
+    "prihlaska_h": "Přihláška na expedici",
+    "prihlaska_text": "Vyplň kontakt a ozveme se ti s podrobnostmi a dalším postupem. Přihláška je nezávazná.",
+    "nahradnik_text": "Expedice je obsazená. Nech nám kontakt a ozveme se, jakmile se uvolní místo.",
+    "dalsi": "Další expedice"
+  },
+  "o_nas": {
+    "title": "O nás – VOYAGE",
+    "description": "VOYAGE je skupina lidí, kteří milují svobodu, adrenalin a autentické zážitky. Cestujeme jinak.",
+    "h1": "Kdo jsme? Skupina, co nečeká na zítřek.",
+    "text": "VOYAGE nevzniklo v kanceláři cestovky, ale na cestách. Jsme skupina lidí, kteří milují svobodu, adrenalin a autentické zážitky.\nNebaví nás organizované zájezdy, kde jen vystoupíš z autobusu a fotíš si památky přes sklo. Chceme cítit prach cesty, zažít místní kulturu na vlastní kůži a večer si o tom pokecat u ohně s lidmi, co mají stejný drajv jako my.\nMy plánujeme logistiku a jedinečný program – vy si užíváte moment, který vám změní pohled na svět."
+  },
+  "privatni": {
+    "title": "Privátní cesty na míru – VOYAGE",
+    "description": "Expedice na míru pro tvou partu nebo firmu. Surf na Madeiře, F1 v Monze nebo wellness vila – vše na klíč.",
+    "h1": "Expedice na míru pro tvou partu nebo firmu.",
+    "text": "Chceš oslavit narozeniny s přáteli na surfu na Madeiře? Nebo hledáš teambuilding pro firmu, na který nikdo nezapomene – třeba víkend na Formuli 1 s business networkingem?\nVOYAGE zařídí vše od A do Z. Navrhneme exkluzivní program na klíč, pronajmeme luxusní vilu a postaráme se o hladký průběh přímo na místě. Ty jen řekni, kam to bude a s kým chceš jet. O zbytek se postaráme.",
+    "body": [
+      {"nadpis": "Návrh programu", "text": "Itinerář šitý vaší skupině na míru."},
+      {"nadpis": "Logistika & vila", "text": "Doprava, transfery, prémiové ubytování."},
+      {"nadpis": "Průvodce na místě", "text": "Někdo, kdo zná lokálku a má drajv."}
+    ]
+  },
+  "influenceri": {
+    "title": "Pro influencery – VOYAGE",
+    "description": "Vytvořme společně tvůj vlastní zájezd. VOYAGE zastřeší organizaci, ubytování, transfery a program na místě.",
+    "h1": "Pojďme spojit tvou komunitu a naše zážitky.",
+    "text": "Jsi influencer, děláš jógu, surfuješ, nebo máš silnou komunitu lidí, kteří tě sledují? Vytvořme společně tvůj vlastní zájezd.\nTy dodáš svou expertízu, energii a přitáhneš lidi, kteří chtějí být ve tvé blízkosti. VOYAGE kompletně zastřeší organizaci, ubytování, transfery a program na místě.\nTy cestuješ zdarma, získáš brutální content pro svůj profil a férovou provizi z každého obsazeného místa.",
+    "body": [
+      {"nadpis": "Cestování zdarma", "text": "Tvoje místo a logistika jdou na nás."},
+      {"nadpis": "Content na míru", "text": "Lokace, momenty a zážitky pro Reels."},
+      {"nadpis": "Férová provize", "text": "Z každého obsazeného místa."}
+    ]
+  },
+  "paticka": "Expediční cesty v malém kruhu pro lidi, kteří chtějí svět zažít, ne odškrtávat."
+}

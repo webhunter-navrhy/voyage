@@ -1,0 +1,10 @@
+dist/
+.cache/
+qa/
+__pycache__/
+podklady/
+.DS_Store
+brief.json
+koncept.md
+review.json
+qa-lokal/

@@ -1,0 +1,12 @@
+{% extends "_base.html" %}
+{% block body_class %}podstranka{% endblock %}
+{% block obsah %}
+<section class="pod-hero">
+  <div class="wrap">
+    <p class="nadtitulek">404</p>
+    <h1>Tady cesta končí.</h1>
+    <p class="sekce-text">Stránka neexistuje nebo byla přesunuta. Expedice najdeš na úvodní stránce.</p>
+    <a href="{{ url('') }}#expedice" class="btn">Zpět na expedice</a>
+  </div>
+</section>
+{% endblock %}
